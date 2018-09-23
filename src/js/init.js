@@ -86,11 +86,32 @@ const init = () => {
 	// }
 
 	
-	const backgroundOptions = buildBackgroundOptions( {
-		target: "#bg-container"
+	const backgroundOptionsA = buildBackgroundOptions( {
+		target: "#bg-container",
+		orientation: "left"
 	})
 
-	const background = Background(backgroundOptions)
+	const backgroundA = Background(backgroundOptionsA)
+		.buildSvg()
+		.buildPaths()
+		.buildCells()
+
+	const backgroundOptionsB = buildBackgroundOptions( {
+		target: "#bg-container",
+		orientation: "center"
+	})
+
+	const backgroundB = Background(backgroundOptionsB)
+		.buildSvg()
+		.buildPaths()
+		.buildCells()
+
+	const backgroundOptionsC = buildBackgroundOptions( {
+		target: "#bg-container",
+		orientation: "right"
+	})
+
+	const backgroundC = Background(backgroundOptionsC)
 		.buildSvg()
 		.buildPaths()
 		.buildCells()
@@ -113,7 +134,13 @@ const init = () => {
 				const thisStepProgress = section * progress
 				const counter = stepsSoFar + thisStepProgress
 
-				background
+				backgroundA
+					.updateCells(counter)
+
+				backgroundB
+					.updateCells(counter)
+
+				backgroundC
 					.updateCells(counter)
 		})
 		// .onStepEnter(handleStepEnter)

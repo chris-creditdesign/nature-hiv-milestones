@@ -1,7 +1,10 @@
 .background {
 	svg {
 		
-
+		position: absolute;
+		top: 0;
+		left: 0;
+		
 		path {
 			display: none;
 			// fill: none;
@@ -17,6 +20,7 @@
 		}
 
 		.nucleusGroup {
+			filter:url('#goo');
 			circle {
 				fill: #68417a;
 			}

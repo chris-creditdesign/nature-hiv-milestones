@@ -22,10 +22,22 @@ const buildBackgroundOptions = data => {
 	options.sectors.three = {min: options.heightUnit * 2, max: options.heightUnit * 3}
 	options.sectors.four = {min: options.heightUnit * 3, max: options.heightUnit * 4}
 
-	options.midPoint = makeCoord(
-		{ min: options.widthUnit * 0.4, max: options.widthUnit * 1},
-		{ min: options.heightUnit * 1, max: options.heightUnit * 3}
-	)
+	if (data.orientation === "left" ) {
+		options.midPoint = makeCoord(
+			{ min: options.widthUnit * 0.4, max: options.widthUnit * 1},
+			{ min: options.heightUnit * 0.5, max: options.heightUnit * 3.5}
+		)
+	} else if (data.orientation === "right" ) {
+		options.midPoint = makeCoord(
+			{ min: options.widthUnit * 2, max: options.widthUnit * 3},
+			{ min: options.heightUnit * 0.5, max: options.heightUnit * 3.5}
+		)
+	} else {
+		options.midPoint = makeCoord(
+			{ min: options.widthUnit * 3, max: options.widthUnit * 3.6},
+			{ min: options.heightUnit * 0.5, max: options.heightUnit * 3.5}
+		)
+	}
 
 	options.target = data && data.target || "body"
 
