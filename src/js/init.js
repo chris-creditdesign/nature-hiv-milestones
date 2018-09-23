@@ -3,12 +3,11 @@ import scrollama from 'scrollama'
 // import * as scrollstory from "../../node_modules/scrollstory/dist/jquery.scrollstory.js"
 import { range } from 'd3-array'
 
-// import loadCanvas from './pixi/function/loadCanvas'
-// import updateCanvas from './pixi/function/updateCanvas'
-// import resizeCanvas from './pixi/function/resizeCanvas'
-
 import Timeline from './timeline/Timeline'
-import buildOptions from './timeline/buildOptions'
+import buildTimelineOptions from './timeline/buildTimelineOptions'
+
+import Background from './background/Background'
+import buildBackgroundOptions from './background/buildBackgroundOptions'
 
 // const jsonURL = "img/cells.json"
 // let app
@@ -30,12 +29,16 @@ import buildOptions from './timeline/buildOptions'
 // }
 
 const handleStepEnter = response => {
-	console.log(response)
-}
-
-const handleStepProgress = response => {
 	// console.log(response)
 }
+
+// const handleStepProgress = response => {
+// 	const { index, progress } = response
+// 	const section = 1 / step.length
+// 	const stepsSoFar = index / step.length
+// 	const thisStepProgress = section * progress
+// 	counter = stepsSoFar + thisStepProgress
+// }
 
 const handleContainerEnter = response => {
 	// console.log(handleContainerEnter)
@@ -49,20 +52,7 @@ const init = () => {
 	const container = document.querySelector(".stories")
 	const step = Array.from(container.querySelectorAll(".story"))
 
-	// Setup the scroller instance and pass the callback function
-	scroller
-		.setup({ 
-			step, 
-			container, 
-			offset: 0.5, 
-			debug: false,
-			order: false,
-			progress: true,
-			threshold: 10
-		})
-		.onStepProgress(handleStepProgress)
-		.onStepEnter(handleStepEnter)
-		// .onContainerEnter(handleContainerEnter)
+
 
 
 	const data = step.map( (elem,index) => {
@@ -80,14 +70,14 @@ const init = () => {
 	data.endYear = 2025
 	data.decades = range(data.startYear, data.endYear, 10)
 
-	const options = buildOptions( { 
+	const timelineOptions = buildTimelineOptions( { 
 		target: "#timeline-container",
 		scrollStory: this,
 		data
 	})
 
 	// if (window.innerWidth >= 800) {
-	const timeline = Timeline(options)
+	const timeline = Timeline(timelineOptions)
 			.buildSvg()
 			.buildScales()
 			.buildLine()
@@ -95,8 +85,40 @@ const init = () => {
 			.buildMilestones()
 	// }
 
-	console.log("timeline", timeline)
-		
+	
+	const backgroundOptions = buildBackgroundOptions( {
+		target: "#bg-container"
+	})
+
+	const background = Background(backgroundOptions)
+		.buildSvg()
+		.buildPaths()
+		.buildCells()
+
+	// Setup the scroller instance and pass the callback function
+	scroller
+		.setup({ 
+			step, 
+			container, 
+			offset: 0.5, 
+			debug: false,
+			order: false,
+			progress: true,
+			threshold: 10
+		})
+		.onStepProgress( response => {
+				const { index, progress } = response
+				const section = 1 / step.length
+				const stepsSoFar = index / step.length
+				const thisStepProgress = section * progress
+				const counter = stepsSoFar + thisStepProgress
+
+				background
+					.updateCells(counter)
+		})
+		// .onStepEnter(handleStepEnter)
+		// .onContainerEnter(handleContainerEnter)
+
 	// const timelineContainer = $("#timeline-container")
 
 	// $('.stories').scrollStory({

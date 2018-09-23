@@ -1,0 +1,25 @@
+.background {
+	svg {
+		
+
+		path {
+			display: none;
+			// fill: none;
+			// stroke-width: 2px;
+			// stroke: black;
+		}
+
+		.cellGroup {
+			filter:url('#goo');
+			circle {
+				fill: #9f7db7;
+			}
+		}
+
+		.nucleusGroup {
+			circle {
+				fill: #68417a;
+			}
+		}
+	}
+}

@@ -6,7 +6,7 @@ import buildMilestones from './buildMilestones'
 import updateSvg from './updateSvg'
 import hideTooltip from './hideTooltip'
 
-const Timeline = (options) => {
+const Timeline = options => {
 	return Object.assign(
 			{},
 			buildSvg,

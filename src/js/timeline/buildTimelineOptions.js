@@ -1,4 +1,4 @@
-const buildOptions = (data) => {
+const buildTimelineOptions = data => {
 
 	const options = {}
 
@@ -15,4 +15,4 @@ const buildOptions = (data) => {
 	return options
 }
 
-export default buildOptions
+export default buildTimelineOptions
