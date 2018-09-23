@@ -1,0 +1,97 @@
+#timeline-container {
+	height: 100vh;
+	position: sticky;
+	// width: 120px;
+	left: 0;
+	top: 0;
+	display: none;
+
+	background: white;
+
+	@media screen and (min-width: $break-small) {
+		display: block;
+	}
+	
+	svg {
+		background-color: $transparent-white;
+		position: absolute;
+		top: 0;
+	}
+
+	svg .milestoneContainer circle,
+	svg .activeMilestoneContainer circle {
+		fill: $dark-background-color;
+		stroke: #fff;
+		stroke-width: 2px;
+		cursor: pointer;
+		transition: fill 300ms ease-in-out;
+		
+		&:hover {
+			fill: #c40226;
+		}
+	}
+
+	svg .activeMilestoneContainer circle {
+		fill: #c40226;
+	}
+
+	svg .axisContainer {
+		text {
+			font-family: $sans-serif-font;
+			font-weight: bold;
+			text-anchor: start;
+			fill: #fff;
+		}
+
+		line {
+			stroke-width: 2px;
+			stroke: #fff;
+		}	
+	} 
+
+	svg .axisContainer rect {
+		fill: $dark-background-color;
+	}
+
+
+	#tooltip {
+		position: absolute;
+		background: #000;
+		color: #fff;
+		font-family: $sans-serif-font;
+		padding: 5px 12px;
+		left: 110px;
+		top: 50px;
+		width: 200px;
+		display: none;
+		z-index: 1000;
+
+		p {
+			margin-bottom: 0;
+
+			&#tooltip-tag {
+				text-transform: uppercase;
+				font-weight: bold;
+				font-size: 0.8rem;
+			}
+		}
+
+		&:before {
+				content: "";
+				position: absolute;
+				top: 40%;
+				left: -7px;
+				border-right: 8px solid #000;
+				border-top: 8px solid transparent;
+				border-bottom: 8px solid transparent;
+				border-left: 0;
+		}
+		
+	}
+
+}
+
+#timeline-container.scrollstoryInactive {
+	position: absolute;
+	top: 50px;
+}

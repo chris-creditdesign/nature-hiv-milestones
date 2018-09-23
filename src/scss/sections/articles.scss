@@ -1,0 +1,210 @@
+.article-container {
+	// position: relative;
+
+    display: flex;
+    justify-content: space-between;
+
+	@media screen and (min-width: $break-small) {
+		padding-top: 50px;
+	}
+
+	background-image: linear-gradient($article-background-color, $article-background-color);
+	background-size: 10px 100%;
+	background-repeat: no-repeat;
+	background-position: 50% 50px;
+
+	article {
+		padding: 20px;
+		background-color: $secondary-article-background-color;
+		box-shadow: 5px 5px 5px rgba(0,0,0,0.2);
+
+		width: 85%;
+		margin: 2em auto 2em;
+	
+
+		@media screen and (min-width: $break-small) {
+			width: 30em;
+			margin: 0 auto 5em;
+		}
+
+		@media screen and (min-width: $break-large) {
+			width: 40em;
+		}
+	}
+
+	h2 {
+		font-size: 1.4rem;
+		margin: 0 0 1rem 0;
+
+		@media screen and (min-width: $break-tiny) {
+			font-size: 1.6rem;
+			margin: 0 0 1.6rem 0;
+		}
+
+		a {
+			color: $text-color;
+		}
+	}
+	
+	a {
+		color: #069;
+		text-decoration: none;
+		
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
+	ol, ul {
+		width: 100%;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	.article-type {
+		font-family: $sans-serif-font;
+		color: $light-text-color;
+		text-transform: uppercase;
+		font-weight: 700;
+		font-size: 0.9rem;
+		margin: 0 0 0.6rem 0;
+		position: relative;
+		margin-left: 15px;
+
+		&:before {
+			content: "";
+			position: absolute;
+			width: 10px;
+			height: 10px;
+			background-color: $light-text-color;
+			top: 0.5em;
+			left: -15px;
+			border-radius: 5px;
+		}
+	}
+
+	article.milestone {
+		background-color: $article-background-color;
+	}
+
+	.date {
+		color: $light-text-color;
+	}
+	
+	ul.author {
+		font-family: $sans-serif-font;
+		text-transform: uppercase;
+		font-weight: 600;
+		font-size: 0.8rem;
+
+		li {
+			display: inline;
+		}
+	}
+
+	.credit {
+		font-family: $sans-serif-font;
+		color: $light-text-color;
+		font-style: italic;
+		font-size: 0.8rem;
+		line-height: 1rem;
+		margin: 0 0 0.6rem 0;
+		text-align: right;
+	}
+	
+	.text-section, .video-section, .podcast-section {
+
+
+	}
+
+	.with-image {
+		@media screen and (min-width: $break-tiny) {
+			display: flex;
+			flex-flow: wrap;
+			flex-direction: row-reverse;
+
+			.header-flex-container {
+				flex: 2 100%;
+			}
+			
+			.text-flex-container {
+				padding-right: 20px;
+				flex: 1 60%;
+			}
+
+			& > .image-flex-container {
+				flex: 1 40%;
+
+			}
+		}
+
+		.image-flex-container {
+			// To place credit nicely under image
+			// display: flex;
+			// flex-direction: column;
+
+		}
+
+
+		img {
+			width: 100%;
+		}
+	}
+
+	.related-content {
+		font-family: $sans-serif-font;
+
+		h2 {
+			font-size: 1.2em;
+			margin: 0 0 1rem 0;
+		}
+		
+		p {
+		}
+
+		.article-type {
+			color: $light-text-color;
+			margin: 0 0 0.2rem 0;
+
+			&:before {
+				content: none;
+			}
+		}
+	}
+
+	// For a related article that is not inside a milestone
+	// such as the Nobel Prize 
+	article .related-content {
+		margin: 1.5em 0 0.5em;
+		width: 100%;
+		box-shadow: none;
+	}
+
+	.related-content.with-image {
+		@media screen and (min-width: $break-tiny) {
+			.text-flex-container {
+				padding-right: 20px;
+				flex: 1 70%;
+			}
+
+			.image-flex-container {
+				flex: 1 30%;
+
+			}
+		}
+
+		@media screen and (min-width: $break-large) {
+			.text-flex-container {
+				padding-right: 20px;
+				flex: 1 61%;
+			}
+
+			.image-flex-container {
+				flex: 1 39%;
+
+			}
+		}
+	}
+
+}

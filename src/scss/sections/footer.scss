@@ -1,0 +1,58 @@
+footer.text-section {
+	font-family: $sans-serif-font;
+	p, a {
+		font-size: 13px;
+	}
+
+	ul {
+		margin: 0;
+	}
+
+	padding: 50px;
+	background-color: $secondary-article-background-color;
+
+	margin: 2em 0 0;
+
+
+	@media screen and (min-width: $break-small) {
+		margin: 2em 0 0 120px;
+		padding: 50px 200px 50px 50px
+	}
+
+	.sn-logo {
+		width: 140px;
+		margin: 0 0 10px 0;
+
+		fill:#4E4E4E
+	}
+
+	.footerlinks {
+		list-style: none;
+		padding: 0;
+
+		li {
+			display: block;
+		}
+
+		@media screen and (min-width: $break-large) {
+			li {
+				display: inline-block;
+				margin-right: 10px;
+			}	
+		}
+
+	}
+
+	a {
+		color: #069;
+		text-decoration: none;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
+	small {
+		font-size: 0.8rem;
+	}
+}
