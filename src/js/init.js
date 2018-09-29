@@ -1,13 +1,12 @@
 import 'intersection-observer'
 import scrollama from 'scrollama'
-// import * as scrollstory from "../../node_modules/scrollstory/dist/jquery.scrollstory.js"
 import { range } from 'd3-array'
 
 import Timeline from './timeline/Timeline'
 import buildTimelineOptions from './timeline/buildTimelineOptions'
 
-import Background from './background/Background'
-import buildBackgroundOptions from './background/buildBackgroundOptions'
+import BackgroundPosition from './background-position/BackgroundPosition'
+import buildBackgroundPositionOptions from './background-position/buildBackgroundPositionOptions'
 
 // const jsonURL = "img/cells.json"
 // let app
@@ -85,36 +84,16 @@ const init = () => {
 			.buildMilestones()
 	// }
 
-	
-	const backgroundOptionsA = buildBackgroundOptions( {
+	const backgroundPositionOptions = buildBackgroundPositionOptions( {
 		target: "#bg-container",
 		orientation: "left"
 	})
 
-	const backgroundA = Background(backgroundOptionsA)
-		.buildSvg()
-		.buildPaths()
-		.buildCells()
+	const backgroundPositions = BackgroundPosition(backgroundPositionOptions)
 
-	const backgroundOptionsB = buildBackgroundOptions( {
-		target: "#bg-container",
-		orientation: "center"
-	})
+	backgroundPositions.init()
 
-	const backgroundB = Background(backgroundOptionsB)
-		.buildSvg()
-		.buildPaths()
-		.buildCells()
-
-	const backgroundOptionsC = buildBackgroundOptions( {
-		target: "#bg-container",
-		orientation: "right"
-	})
-
-	const backgroundC = Background(backgroundOptionsC)
-		.buildSvg()
-		.buildPaths()
-		.buildCells()
+	console.log(backgroundPositions.impact)
 
 	// Setup the scroller instance and pass the callback function
 	scroller
@@ -134,47 +113,13 @@ const init = () => {
 				const thisStepProgress = section * progress
 				const counter = stepsSoFar + thisStepProgress
 
-				backgroundA
-					.updateCells(counter)
+				backgroundPositions.getPositions(counter)
 
-				backgroundB
-					.updateCells(counter)
-
-				backgroundC
-					.updateCells(counter)
 		})
 		// .onStepEnter(handleStepEnter)
 		// .onContainerEnter(handleContainerEnter)
 
-	// const timelineContainer = $("#timeline-container")
 
-	// $('.stories').scrollStory({
-	// 	autoActivateFirstItem: false,
-	// 	debug: false,
-	// 	triggerOffset: 0,
-	// 	scrollOffset: 0,
-	// 	keyboard: true,
-	// 	scrollSensitivity: 50,
-	// 	containerscroll: function() {
-	// 		updateCanvas(app, this)
-	// 		timeline && timeline.hideTooltip()
-	// 	},
-	// 	itemfocus: function(ev, item) {
-	// 		timeline && timeline.buildMilestones(item.index)
-	// 	},
-	// 	complete: complete,
-	// 	updateoffsets: function() {
-	// 		app && resizeCanvas(app)
-	// 		app && updateCanvas(app, this)
-	// 		timeline && timeline.updateSvg()
-	// 	},
-	// 	containeractive: function() {
-	// 		timelineContainer.removeClass("scrollstoryInactive")
- //  		},
- //  		containerinactive: function() {
-	// 		timelineContainer.addClass("scrollstoryInactive")
- //  		}
-	// })
 }
 
 export default init

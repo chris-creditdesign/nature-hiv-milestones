@@ -57,12 +57,6 @@ const buildPaths = function() {
 		"exit"
 	)
 
-	this.pathLengths.entryPathLength = this.paths.entryPath.node().getTotalLength()
-	this.pathLengths.exitPathALength = this.paths.exitPathA.node().getTotalLength()
-	this.pathLengths.exitPathBLength = this.paths.exitPathB.node().getTotalLength()
-	this.pathLengths.exitPathCLength = this.paths.exitPathC.node().getTotalLength()
-	this.pathLengths.exitPathDLength = this.paths.exitPathD.node().getTotalLength()
-
 	return this
 }
 

@@ -10,12 +10,6 @@ const buildSvg = function() {
 		this.pathGroup = this.svg.append("g")
 			.attr("class", "pathGroup")
 
-		this.cellGroup = this.svg.append("g")
-			.attr("class", "cellGroup")
-
-		this.nucleusGroup = this.svg.append("g")
-			.attr("class", "nucleusGroup")
-
 		return this
 
 	}
