@@ -27,6 +27,9 @@ const onAssetsLoaded = function(app, resources, jsonURl) {
 	
 	app.stage.addChild( cellContainer )
 
+
+
+
 	// Array.from({length: totalSprites}).forEach( (elem,index,array) => {
 		
 	// 	if (index % 10 === 0) {
