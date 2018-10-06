@@ -1,24 +1,16 @@
 import * as PIXI from 'pixi.js'
 import randomInt from '../../helpers/randomInt.js'
 
-const Cell = function(app, textures, index) {
+const Cell = function(app, textures, name) {
 
-	PIXI.Sprite.call(this, textures[Object.keys(textures)[index]])
+	PIXI.Sprite.call(this, textures[name])
 
 	this.anchor.set(0.5)
+	this.name = name
 
-	// this.xOffset = Math.random()
-	// this.yOffset = Math.random()
+	const scaleOffset = randomInt(60,100) / 100
 
-	// // this.scaleOffset = window.innerWidth < 600 ? 0.5 : 1
-
-	// this.x = this.startX = this.xOffset * app.screen.width
-	// this.y = this.startY = this.yOffset * app.screen.height
-	this.rotation = this.startRotation = Math.random() * Math.PI * 2
-	
-	// if (window.innerWidth < 600) {
-	// 	this.scale.set(this.scaleOffset, this.scaleOffset)
-	// }
+	this.scale.set(scaleOffset, scaleOffset)
 
 }
 

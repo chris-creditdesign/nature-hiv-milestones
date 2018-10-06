@@ -3,9 +3,14 @@ const updateCanvas = function(app, counter) {
 	app.stage.children.forEach( container => {
 		const positions = container.backgroundPositions.getPositions(counter)
 
-		container.children.forEach( (cell, index) => {
+		container.children.filter( d => d.name === "virus.png").forEach( (cell, index) => {
 			cell.x = positions[index].x
 			cell.y = positions[index].y
+		})
+
+		container.children.filter( d => d.name === "t-cell.png").forEach( cell => {
+			cell.x = container.backgroundPositions.midPoint.x
+			cell.y = container.backgroundPositions.midPoint.y
 		})
 	})
 

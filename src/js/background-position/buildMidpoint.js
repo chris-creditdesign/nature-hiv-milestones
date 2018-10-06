@@ -9,12 +9,12 @@ const buildMidpoint = function() {
 		)
 	} else if (this.orientation === "right" ) {
 		this.midPoint = makeCoord(
-			{ min: this.widthUnit * 2, max: this.widthUnit * 3},
+			{ min: this.widthUnit * 3, max: this.widthUnit * 3.8},
 			{ min: this.heightUnit * 0.5, max: this.heightUnit * 3.5}
 		)
 	} else {
 		this.midPoint = makeCoord(
-			{ min: this.widthUnit * 3, max: this.widthUnit * 3.6},
+			{ min: this.widthUnit * 1, max: this.widthUnit * 3},
 			{ min: this.heightUnit * 0.5, max: this.heightUnit * 3.5}
 		)
 	}

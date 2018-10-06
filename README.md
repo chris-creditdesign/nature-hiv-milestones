@@ -24,6 +24,11 @@ To create minified, autoprefixed css and js files:
 
 ## To do:
 
+- Apply filter just to container
+- Add nucleus group
+- Add cell to cell transmission
+- Make cell die after budding
+
 - Update SVG to just provide coordinates - can be rendered in canvas or svg. Does the svg have to be added to the page? 
 - Add pa11y test
 - Remove modernizr

@@ -1,8 +1,5 @@
 import * as PIXI from 'pixi.js'
 import onAssetsLoaded from './onAssetsLoaded'
-// import Cell from '../class/Cell'
-// import Container from '../class/Container'
-// import FastContainer from '../class/FastContainer'
 
 const loadCanvas = function(jsonURL) {
 	
@@ -23,20 +20,22 @@ const loadCanvas = function(jsonURL) {
 
 	app.stage.alpha = 0
 
-	const blur = new PIXI.filters.BlurFilter(15)
-	const colorMatrix = new PIXI.filters.ColorMatrixFilter()
-	colorMatrix.contrast(20, false);
-	const colorMatrix2 = new PIXI.filters.ColorMatrixFilter()
-	colorMatrix2.hue(20, true)
-
-	app.stage.filterArea = new PIXI.Rectangle(0, 0, window.innerWidth, height)
-	app.stage.filters = [blur, colorMatrix, colorMatrix2]
-
 	PIXI.loader
 		.add(jsonURL)
 		.load((loader, resources) => {
 			onAssetsLoaded(app, resources, jsonURL)
 		})
+
+	const blurFilter = new PIXI.filters.BlurFilter(10)
+	const colorMatrixFilter = new PIXI.filters.ColorMatrixFilter()
+	
+	colorMatrixFilter.contrast(20, false)
+	colorMatrixFilter.hue(20, true)
+	colorMatrixFilter.alpha = 0.1
+
+	app.stage.filterArea = new PIXI.Rectangle(0, 0, window.innerWidth, height)
+	app.stage.filters = [blurFilter, colorMatrixFilter]
+
 
 	ticker.add((deltaTime) => {
 		alpha += 0.05

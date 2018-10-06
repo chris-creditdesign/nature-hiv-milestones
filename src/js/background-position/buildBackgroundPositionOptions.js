@@ -3,8 +3,6 @@ import randomInt from '../helpers/randomInt.js'
 
 const buildBackgroundPositionOptions = data => {
 
-	console.log(data)
-
 	const options = {}
 
 	options.width = document.documentElement.clientWidth
@@ -29,8 +27,8 @@ const buildBackgroundPositionOptions = data => {
 	options.orientation = data.orientation || "left"
 
 	options.impact = {}
-	options.impact.start = randomInt(25,40) / 100
-	options.impact.end = randomInt(50,80) / 100
+	options.impact.start = randomInt(20,50) / 100
+	options.impact.end = randomInt(50,75) / 100
 
 
 	return options

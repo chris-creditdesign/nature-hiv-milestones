@@ -11,7 +11,7 @@ import loadCanvas from './pixi/function/loadCanvas'
 import updateCanvas from './pixi/function/updateCanvas'
 
 
-const jsonURL = "img/cells.json"
+const jsonURL = "img/hiv-cells.json"
 
 // let app
 // let timeline
