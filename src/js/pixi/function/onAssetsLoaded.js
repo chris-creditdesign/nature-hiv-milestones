@@ -7,23 +7,25 @@ import updateCanvas from './updateCanvas'
 const onAssetsLoaded = function(app, resources, jsonURl) {
 	
 	const ticker = new PIXI.ticker.Ticker()
-	// let alpha = 0
+	let alpha = 0
 
 	const textures = resources[jsonURl].textures
 
-	const cellContainer = app.renderer instanceof PIXI.WebGLRenderer ? 
-		new FastContainer("cell")
-		: new Container("cell")
+	// const cellContainer = app.renderer instanceof PIXI.WebGLRenderer ? 
+	// 	new FastContainer("cell")
+	// 	: new Container("cell")
+
+	const cellContainer = new FastContainer("#bg-container", "left", "cell")
 
 	const totalSprites = 4
 
-	app.stage.addChild( cellContainer )
-
-	Array.from({length: 4}).forEach( (elem, index) => {
+	Array.from({length: totalSprites}).forEach( (elem, index) => {
 		const cell = new Cell(app, textures, index)
 		
 		cellContainer.addChild(cell)
 	})
+	
+	app.stage.addChild( cellContainer )
 
 	// Array.from({length: totalSprites}).forEach( (elem,index,array) => {
 		
@@ -45,14 +47,14 @@ const onAssetsLoaded = function(app, resources, jsonURl) {
 
 	// updateCanvas(app, scrollstory)
 
-	// ticker.add((deltaTime) => {
-	// 	alpha += 0.05
-	// 	alpha >= 1 ?
-	// 		ticker.stop()
-	// 		: app.stage.alpha = alpha
-	// });
+	ticker.add((deltaTime) => {
+		alpha += 0.05
+		alpha >= 1 ?
+			ticker.stop()
+			: app.stage.alpha = alpha
+	});
 
-	// ticker.start();
+	ticker.start();
 }
 
 export default onAssetsLoaded

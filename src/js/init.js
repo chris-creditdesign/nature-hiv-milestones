@@ -5,8 +5,7 @@ import { range } from 'd3-array'
 import Timeline from './timeline/Timeline'
 import buildTimelineOptions from './timeline/buildTimelineOptions'
 
-import BackgroundPosition from './background-position/BackgroundPosition'
-import buildBackgroundPositionOptions from './background-position/buildBackgroundPositionOptions'
+
 
 import loadCanvas from './pixi/function/loadCanvas'
 import updateCanvas from './pixi/function/updateCanvas'
@@ -86,17 +85,9 @@ const init = () => {
 			.buildMilestones()
 	// }
 
-	const backgroundPositionOptions = buildBackgroundPositionOptions( {
-		target: "#bg-container",
-		orientation: "left"
-	})
-
-	const backgroundPositions = BackgroundPosition(backgroundPositionOptions)
-
-	backgroundPositions.init()
 
 	// Initiate the PIXI canvas 
-	const app = loadCanvas(jsonURL, backgroundPositions)
+	const app = loadCanvas(jsonURL)
 	document.getElementById("pixi-container").appendChild(app.view)
 
 	// Setup the scroller instance and pass the callback function
@@ -117,7 +108,7 @@ const init = () => {
 				const thisStepProgress = section * progress
 				const counter = stepsSoFar + thisStepProgress
 
-				backgroundPositions.getPositions(counter)
+				updateCanvas(app, counter)
 
 		})
 		// .onStepEnter(handleStepEnter)

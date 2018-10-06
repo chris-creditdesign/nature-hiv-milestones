@@ -3,6 +3,8 @@ import randomInt from '../helpers/randomInt.js'
 
 const buildBackgroundPositionOptions = data => {
 
+	console.log(data)
+
 	const options = {}
 
 	options.width = document.documentElement.clientWidth

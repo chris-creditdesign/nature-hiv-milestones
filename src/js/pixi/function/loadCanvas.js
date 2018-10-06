@@ -4,7 +4,7 @@ import onAssetsLoaded from './onAssetsLoaded'
 // import Container from '../class/Container'
 // import FastContainer from '../class/FastContainer'
 
-const loadCanvas = function(jsonURL, backgroundPositions) {
+const loadCanvas = function(jsonURL) {
 	
 	const ticker = new PIXI.ticker.Ticker()
 	let alpha = 0
@@ -23,36 +23,11 @@ const loadCanvas = function(jsonURL, backgroundPositions) {
 
 	app.stage.alpha = 0
 
-	app.backgroundPositions = backgroundPositions
-
 	PIXI.loader
 		.add(jsonURL)
 		.load((loader, resources) => {
 			onAssetsLoaded(app, resources, jsonURL)
 		})
-
-	// const cellContainer = app.renderer instanceof PIXI.WebGLRenderer ? 
-	// 	new FastContainer("cell")
-	// 	: new Container("cell")
-	
-	
-	// const nucleusContainer = app.renderer instanceof PIXI.WebGLRenderer ?
-	// 	new FastContainer("nucleus")
-	// 	: new Container("nucleus")
-
-	// app.stage.addChild(cellContainer, nucleusContainer)
-
-	// const cell = new Cell(app.renderer)
-	// cell.position.x = 250
-	// app.stage.addChild(cell)
-	// console.log(cell)
-
-	// Array.from({length: 4}).forEach( () => {
-	// 	const cell = new Cell()
-	// 	console.log(cell)
-	// 	cellContainer.addChild(cell)
-	// })
-
 
 	ticker.add((deltaTime) => {
 		alpha += 0.05
