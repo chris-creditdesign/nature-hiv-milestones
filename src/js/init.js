@@ -8,7 +8,12 @@ import buildTimelineOptions from './timeline/buildTimelineOptions'
 import BackgroundPosition from './background-position/BackgroundPosition'
 import buildBackgroundPositionOptions from './background-position/buildBackgroundPositionOptions'
 
-// const jsonURL = "img/cells.json"
+import loadCanvas from './pixi/function/loadCanvas'
+import updateCanvas from './pixi/function/updateCanvas'
+
+
+const jsonURL = "img/cells.json"
+
 // let app
 // let timeline
 
@@ -51,9 +56,6 @@ const init = () => {
 	const container = document.querySelector(".stories")
 	const step = Array.from(container.querySelectorAll(".story"))
 
-
-
-
 	const data = step.map( (elem,index) => {
 
 		return {
@@ -93,7 +95,9 @@ const init = () => {
 
 	backgroundPositions.init()
 
-	console.log(backgroundPositions.impact)
+	// Initiate the PIXI canvas 
+	const app = loadCanvas(jsonURL, backgroundPositions)
+	document.getElementById("pixi-container").appendChild(app.view)
 
 	// Setup the scroller instance and pass the callback function
 	scroller

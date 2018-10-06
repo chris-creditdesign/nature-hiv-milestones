@@ -29,6 +29,7 @@ To create minified, autoprefixed css and js files:
 - Remove modernizr
 - No js class on body?
 - Re do CSS as BEM
+- get positions.js 	// Array.from({length: 4}, elem => ({x: 0, y:0}) )
 
 /**
  * `getInterpolatedValue` provides a midpoint value
