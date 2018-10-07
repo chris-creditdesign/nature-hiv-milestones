@@ -1,6 +1,6 @@
 const updateCanvas = function(app, counter) {
 
-	app.stage.children.forEach( container => {
+	app.stage.children.filter( elem => elem.name !== "alpha").forEach( container => {
 		const positions = container.backgroundPositions.getPositions(counter)
 
 		container.children.filter( d => d.name === "virus").forEach( (cell, index) => {
