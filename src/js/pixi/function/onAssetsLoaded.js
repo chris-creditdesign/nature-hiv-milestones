@@ -1,5 +1,6 @@
 import * as PIXI from 'pixi.js'
 import Container from '../class/Container'
+import Virus from '../class/Virus'
 import Cell from '../class/Cell'
 import updateCanvas from './updateCanvas'
 
@@ -26,12 +27,14 @@ const onAssetsLoaded = function(app, resources, jsonURl) {
 
 	app.stage.children.forEach( container => {
 		Array.from({length: 4}).forEach( () => {
-			const cell = new Cell(app, textures, "virus.png")
-			container.addChild(cell)
+			const virus = new Virus(app, textures)
+			container.addChild(virus)
 		})
 
-		container.addChild( new Cell(app, textures, "t-cell.png") )
+		container.addChild( new Cell(app, textures) )
 	})
+
+	console.log(cellContainerLeft)
 
 	ticker.add((deltaTime) => {
 		alpha += 0.05

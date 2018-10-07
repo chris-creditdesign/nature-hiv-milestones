@@ -26,7 +26,7 @@ const loadCanvas = function(jsonURL) {
 			onAssetsLoaded(app, resources, jsonURL)
 		})
 
-	const blurFilter = new PIXI.filters.BlurFilter(10)
+	const blurFilter = new PIXI.filters.BlurFilter(5)
 	const colorMatrixFilter = new PIXI.filters.ColorMatrixFilter()
 	
 	colorMatrixFilter.contrast(20, false)

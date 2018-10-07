@@ -2,15 +2,15 @@
 
 "dead-cell.png":
 {
-	"frame": {"x":0,"y":0,"w":500,"h":500},
+	"frame": {"x":0,"y":0,"w":250,"h":250},
 	"rotated": false,
 	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":500,"h":500},
-	"sourceSize": {"w":500,"h":500}
+	"spriteSourceSize": {"x":0,"y":0,"w":250,"h":250},
+	"sourceSize": {"w":250,"h":250}
 },
 "t-cell.png":
 {
-	"frame": {"x":0,"y":500,"w":250,"h":250},
+	"frame": {"x":250,"y":0,"w":250,"h":250},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":250,"h":250},
@@ -18,19 +18,19 @@
 },
 "virus.png":
 {
-	"frame": {"x":250,"y":500,"w":60,"h":60},
+	"frame": {"x":500,"y":0,"w":35,"h":35},
 	"rotated": false,
 	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":60,"h":60},
-	"sourceSize": {"w":60,"h":60}
+	"spriteSourceSize": {"x":0,"y":0,"w":35,"h":35},
+	"sourceSize": {"w":35,"h":35}
 }},
 "meta": {
 	"app": "https://www.codeandweb.com/texturepacker",
 	"version": "1.0",
 	"image": "hiv-cells.png",
 	"format": "RGBA8888",
-	"size": {"w":500,"h":750},
+	"size": {"w":535,"h":250},
 	"scale": "1",
-	"smartupdate": "$TexturePacker:SmartUpdate:67c9a08fde877f46134742cb30af3d12:cd8eb6347500994f7ff8744c300b1edf:f87d003e40e60934b23c97d96f744012$"
+	"smartupdate": "$TexturePacker:SmartUpdate:26cf6e28b5c34e26f91ec3bf7635b9b8:d62708818fd35ebe9c25997a05a36963:f87d003e40e60934b23c97d96f744012$"
 }
 }
