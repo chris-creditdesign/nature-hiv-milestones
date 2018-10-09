@@ -1,6 +1,6 @@
 {"frames": {
 
-"dead-cell.png":
+"cell-back.png":
 {
 	"frame": {"x":0,"y":0,"w":250,"h":250},
 	"rotated": false,
@@ -8,29 +8,77 @@
 	"spriteSourceSize": {"x":0,"y":0,"w":250,"h":250},
 	"sourceSize": {"w":250,"h":250}
 },
-"t-cell.png":
+"cell-complete.png":
 {
-	"frame": {"x":250,"y":0,"w":250,"h":250},
+	"frame": {"x":0,"y":250,"w":250,"h":250},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":250,"h":250},
 	"sourceSize": {"w":250,"h":250}
 },
-"virus.png":
+"cell-dead.png":
 {
-	"frame": {"x":500,"y":0,"w":35,"h":35},
+	"frame": {"x":0,"y":500,"w":250,"h":250},
 	"rotated": false,
 	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":35,"h":35},
-	"sourceSize": {"w":35,"h":35}
+	"spriteSourceSize": {"x":0,"y":0,"w":250,"h":250},
+	"sourceSize": {"w":250,"h":250}
+},
+"cell-front-back.png":
+{
+	"frame": {"x":0,"y":750,"w":250,"h":250},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":250,"h":250},
+	"sourceSize": {"w":250,"h":250}
+},
+"cell-front.png":
+{
+	"frame": {"x":0,"y":1000,"w":250,"h":250},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":250,"h":250},
+	"sourceSize": {"w":250,"h":250}
+},
+"cell-nucleus.png":
+{
+	"frame": {"x":0,"y":1250,"w":250,"h":250},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":250,"h":250},
+	"sourceSize": {"w":250,"h":250}
+},
+"virus-back.png":
+{
+	"frame": {"x":0,"y":1500,"w":50,"h":50},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":50,"h":50},
+	"sourceSize": {"w":50,"h":50}
+},
+"virus-front.png":
+{
+	"frame": {"x":50,"y":1500,"w":50,"h":50},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":50,"h":50},
+	"sourceSize": {"w":50,"h":50}
+},
+"virus-nucleus.png":
+{
+	"frame": {"x":100,"y":1500,"w":50,"h":50},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":50,"h":50},
+	"sourceSize": {"w":50,"h":50}
 }},
 "meta": {
 	"app": "https://www.codeandweb.com/texturepacker",
 	"version": "1.0",
 	"image": "hiv-cells.png",
 	"format": "RGBA8888",
-	"size": {"w":535,"h":250},
+	"size": {"w":250,"h":1550},
 	"scale": "1",
-	"smartupdate": "$TexturePacker:SmartUpdate:26cf6e28b5c34e26f91ec3bf7635b9b8:d62708818fd35ebe9c25997a05a36963:f87d003e40e60934b23c97d96f744012$"
+	"smartupdate": "$TexturePacker:SmartUpdate:d1a138183837e50a908165386a9b7723:3b1bc88424ede3316f9ca3ca2df882a3:f87d003e40e60934b23c97d96f744012$"
 }
 }

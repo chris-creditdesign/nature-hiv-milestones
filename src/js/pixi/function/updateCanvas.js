@@ -3,21 +3,25 @@ const updateCanvas = function(app, counter) {
 	app.stage.children.filter( elem => elem.name !== "alpha").forEach( container => {
 		const positions = container.backgroundPositions.getPositions(counter)
 
-		container.children.filter( d => d.name === "virus").forEach( (cell, index) => {
-			cell.x = positions[index].x
-			cell.y = positions[index].y
+		container.children.forEach( innerContainer => {
+			innerContainer.children.filter( d => d.name === "virus").forEach( (cell, index) => {
+				cell.x = positions[index].x
+				cell.y = positions[index].y
+			})
+			
 		})
 
-		container.children.filter( d => d.name === "cell").forEach( cell => {
-			cell.x = container.backgroundPositions.midPoint.x
-			cell.y = container.backgroundPositions.midPoint.y
 
-			if (counter > (container.backgroundPositions.impact.end + 0.3)) {
-				cell.texture = cell.textures[1]
-			} else {
-				cell.texture = cell.textures[0]
-			}
-		})
+		// container.children.filter( d => d.name === "cell").forEach( cell => {
+		// 	cell.x = container.backgroundPositions.midPoint.x
+		// 	cell.y = container.backgroundPositions.midPoint.y
+
+		// 	if (counter > (container.backgroundPositions.impact.end + 0.3)) {
+		// 		cell.texture = cell.textures[1]
+		// 	} else {
+		// 		cell.texture = cell.textures[0]
+		// 	}
+		// })
 	})
 
 	// const step = scrollstory._percentScrollToLastItem

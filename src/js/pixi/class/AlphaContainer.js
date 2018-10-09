@@ -1,6 +1,8 @@
 import * as PIXI from 'pixi.js'
+import randomInt from '../../helpers/randomInt'
+import Cell from './Cell'
 
-const AlphaContainer = function() {
+const AlphaContainer = function(width, height, textures) {
 	PIXI.Container.call(this)
 
 	this.name = "alpha"
@@ -12,6 +14,16 @@ const AlphaContainer = function() {
 	
 	// this.filterArea = new PIXI.Rectangle(0, 0, width, height)
 	// this.filters = [alphaFilter]
+
+	Array.from({length: 20}).forEach( () => {
+		const cell = new Cell(textures["cell-complete.png"])
+
+		cell.x = randomInt(0,width)
+		cell.y = randomInt(0,height)
+		cell.alpha = randomInt(5,30) / 100
+
+		this.addChild(cell)
+	})
 
 } 
 
