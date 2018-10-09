@@ -17,12 +17,16 @@ const jsonURL = "img/hiv-cells.json"
 // let timeline
 
 // function complete() {
-// 	this.animationActive = false
 
 // 	app = loadCanvas(this, jsonURL)
 // 	document.getElementById("pixi-container").appendChild(app.view)
 
-// 	const checkbox = $("#animation-control").find("input")
+let animationActive = false
+const checkbox = document.getElementById("animations")
+
+checkbox.addEventListener("change", function(){ 
+	animationActive = this.checked
+})
 
 // 	checkbox.change(() => {
 // 		this.animationActive = checkbox.prop("checked")
@@ -108,7 +112,9 @@ const init = () => {
 				const thisStepProgress = section * progress
 				const counter = stepsSoFar + thisStepProgress
 
-				updateCanvas(app, counter)
+				if (animationActive) {
+					updateCanvas(app, counter)
+				}
 
 		})
 		// .onStepEnter(handleStepEnter)

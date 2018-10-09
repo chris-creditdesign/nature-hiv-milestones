@@ -65,6 +65,9 @@ const onAssetsLoaded = function(app, resources, jsonURl) {
 	});
 
 	ticker.start();
+
+	// Just a temporary measure
+	updateCanvas(app, 0.8)
 }
 
 export default onAssetsLoaded
