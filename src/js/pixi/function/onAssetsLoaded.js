@@ -19,8 +19,8 @@ const onAssetsLoaded = function(app, resources, jsonURl) {
 
 	const cellContainerA = new Container("#bg-container", "left", "cellContainerA", textures)
 	const cellContainerB = new Container("#bg-container", "right", "cellContainerB", textures)
-	const cellContainerC = new Container("#bg-container", "left", "cellContainerC", textures)
-	const cellContainerD = new Container("#bg-container", "right", "cellContainerD", textures)
+	// const cellContainerC = new Container("#bg-container", "left", "cellContainerC", textures)
+	// const cellContainerD = new Container("#bg-container", "right", "cellContainerD", textures)
 	
 	// const cellContainerRightA = new Container("#bg-container", "right", "cell", 0.3)
 	// const cellContainerCentreA = new Container("#bg-container", "centre", "cell", 0.5)
@@ -46,9 +46,7 @@ const onAssetsLoaded = function(app, resources, jsonURl) {
 
 	app.stage.addChild( alphaContainer, 
 						cellContainerA, 
-						cellContainerB, 
-						cellContainerC,
-						cellContainerD 
+						cellContainerB
 						)
 	
 	// app.stage.addChild(	alphaContainer,

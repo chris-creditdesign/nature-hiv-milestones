@@ -20,7 +20,7 @@ const AlphaContainer = function(width, height, textures) {
 
 		cell.x = randomInt(0,width)
 		cell.y = randomInt(0,height)
-		cell.alpha = randomInt(5,30) / 100
+		cell.alpha = randomInt(15,30) / 100
 
 		this.addChild(cell)
 	})
