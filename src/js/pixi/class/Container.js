@@ -2,9 +2,10 @@ import * as PIXI from 'pixi.js'
 
 import BackgroundPosition from '../../background-position/BackgroundPosition'
 import buildBackgroundPositionOptions from '../../background-position/buildBackgroundPositionOptions'
+import Cell from './Cell'
+import Virus from './Virus'
 
-
-const Container = function(target, orientation, name, alpha) {
+const Container = function(target, orientation, name, textures) {
 	PIXI.Container.call(this)
 	this.name = name
 
@@ -16,6 +17,54 @@ const Container = function(target, orientation, name, alpha) {
 	this.backgroundPositions = BackgroundPosition(backgroundPositionOptions)
 
 	this.backgroundPositions.init()
+
+	const {x, y} = this.backgroundPositions.midPoint
+
+	const backContainer = new PIXI.Container()
+	const frontContainer = new PIXI.Container()
+	const nucleusContainer = new PIXI.Container()
+
+	Array.from({length: 4}).forEach( () => {
+		const virusBack = new Virus(textures["virus-back.png"])
+		const virusFront = new Virus(textures["virus-front.png"])
+		const virusNucleus = new Virus(textures["virus-nucleus.png"])
+		
+		backContainer.addChild(virusBack)
+		frontContainer.addChild(virusFront)
+		nucleusContainer.addChild(virusNucleus)
+	})
+
+	const cellBack = new Cell(textures["cell-back.png"])
+	cellBack.x = x
+	cellBack.y = y
+	const cellFront = new Cell(textures["cell-front.png"])
+	cellFront.x = x
+	cellFront.y = y
+	const cellNucleus = new Cell(textures["cell-nucleus.png"])
+	cellNucleus.x = x
+	cellNucleus.y = y
+
+	backContainer.addChild(cellBack)
+	frontContainer.addChild(cellFront)
+	nucleusContainer.addChild(cellNucleus)
+
+	// Array.from({length: 4}).forEach( () => {
+	// 	const virusBack = new Virus(textures["virus-back.png"])
+	// 	this.addChild(virusBack)
+	// })
+	
+
+
+
+	// Array.from({length: 4}).forEach( () => {
+	// 	const virusBack = new Virus(textures["virus-back.png"])
+	// 	const virusFront = new Virus(textures["virus-front.png"])
+	// 	const virusNucleus = new Virus(textures["virus-nucleus.png"])
+	// 	this.addChild(virusBack, virusFront, virusNucleus)
+	// })
+
+
+	this.addChild(backContainer, frontContainer, nucleusContainer)
 
 }
 

@@ -1,7 +1,7 @@
 import * as PIXI from 'pixi.js'
-import randomInt from '../../helpers/randomInt'
+import randomInt from '../../helpers/randomInt.js'
 
-const Cell = function(texture) {
+const CellNucleus = function(texture) {
 
 	/*
 		If textures is an array handle as an array
@@ -22,6 +22,6 @@ const Cell = function(texture) {
 
 }
 
-Cell.prototype = Object.create(PIXI.Sprite.prototype)
+CellNucleus.prototype = Object.create(PIXI.Sprite.prototype)
 
-export default Cell
+export default CellNucleus
