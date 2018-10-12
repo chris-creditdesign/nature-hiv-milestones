@@ -9,21 +9,23 @@ function addMilestones(selection, timeline) {
 		.attr("cy", d => timeline.timeScale(d.start))
 		.attr("r", timeline.width / 10)
 		.on("click", (d) => {
-			timeline.scrollStory.setActiveItem(timeline.scrollStory._items[d.number - 1])
+			document.getElementById(d.id)
+				.scrollIntoView({ block: 'start',  behavior: 'smooth' })
 		})
 		.on("mouseenter", (d) => {
-			timeline.tooltip
-				.find("#tooltip-title")
-				.text(d.title)
+			
+			document.getElementById("tooltip-title")
+				.innerText = d.title
+			document.getElementById("tooltip-tag")
+				.innerText = `${d.name} (${d.start}${d.end ? `-${d.end}`: ""})`
 
-			timeline.tooltip
-				.find("#tooltip-tag")
-				.text(`${d.name} (${d.start}${d.end ? `-${d.end}`: ""})`)
+			timeline.tooltip.style.top = timeline.timeScale(d.start) + timeline.margins.top - (timeline.tooltip.offsetHeight / 2) + "px"
 
-			timeline.tooltip.css("top", timeline.timeScale(d.start) + timeline.margins.top - (timeline.tooltip.outerHeight() / 2))
-				.show()
+			timeline.tooltip.classList.toggle("hidden")
 		})
-		.on("mouseleave", () => timeline.tooltip.hide())
+		.on("mouseleave", () => {
+			timeline.tooltip.classList.toggle("hidden")
+		})
 }
 
 const buildMilestones = function(index) {

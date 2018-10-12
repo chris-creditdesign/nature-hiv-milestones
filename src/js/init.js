@@ -5,11 +5,8 @@ import { range } from 'd3-array'
 import Timeline from './timeline/Timeline'
 import buildTimelineOptions from './timeline/buildTimelineOptions'
 
-
-
 import loadCanvas from './pixi/function/loadCanvas'
 import updateCanvas from './pixi/function/updateCanvas'
-
 
 const jsonURL = "img/hiv-cells.json"
 
@@ -64,6 +61,7 @@ const init = () => {
 		return {
 			start: parseInt(elem.dataset.start, 10),
 			end: parseInt(elem.dataset.end, 10),
+			id: elem.getAttribute("id"),
 			name: elem.getAttribute("id").split("-").map( s => s.charAt(0).toUpperCase() + s.slice(1) ).join(" "),
 			title: elem.querySelector("h2").innerText,
 			number: index + 1
@@ -76,7 +74,6 @@ const init = () => {
 
 	const timelineOptions = buildTimelineOptions( { 
 		target: "#timeline-container",
-		scrollStory: this,
 		data
 	})
 

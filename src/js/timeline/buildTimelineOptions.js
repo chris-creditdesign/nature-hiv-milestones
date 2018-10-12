@@ -9,8 +9,7 @@ const buildTimelineOptions = data => {
 	options.height = options.totalHeight - options.margins.top - options.margins.bottom
 	options.data = data && data.data || []
 	options.target = data && data.target || "body"
-	// options.tooltip = $("#tooltip")
-	// options.scrollStory = data && data.scrollStory || undefined
+	options.tooltip = document.getElementById("tooltip")
 
 	return options
 }

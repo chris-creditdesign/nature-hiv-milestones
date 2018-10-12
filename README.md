@@ -25,13 +25,13 @@ To create minified, autoprefixed css and js files:
 ## To do:
 
 
-- Right viroid comes in from the right
-- Make timeline buttons work
+- Make timeline buttons work\
+- Resize canvas
 - Cell to cell transmission 
 - Add mottled effect, ripples, dotted shading... 
+- Add side by side dot, for matching dates
+- Right viroid comes in from the right
 
-- Apply filter just to container
-- Add nucleus group
 - Add cell to cell transmission
 - Make cell die after budding
 
