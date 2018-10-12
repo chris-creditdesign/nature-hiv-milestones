@@ -10,14 +10,6 @@ import updateCanvas from './pixi/function/updateCanvas'
 
 const jsonURL = "img/hiv-cells.json"
 
-// let app
-// let timeline
-
-// function complete() {
-
-// 	app = loadCanvas(this, jsonURL)
-// 	document.getElementById("pixi-container").appendChild(app.view)
-
 let animationActive = false
 const checkbox = document.getElementById("animations")
 
@@ -25,33 +17,13 @@ checkbox.addEventListener("change", function(){
 	animationActive = this.checked
 })
 
-// 	checkbox.change(() => {
-// 		this.animationActive = checkbox.prop("checked")
-// 		updateCanvas(app, this)
-// 	})
 
-// }
-
-const handleStepEnter = response => {
-	// console.log(response)
-}
-
-// const handleStepProgress = response => {
-// 	const { index, progress } = response
-// 	const section = 1 / step.length
-// 	const stepsSoFar = index / step.length
-// 	const thisStepProgress = section * progress
-// 	counter = stepsSoFar + thisStepProgress
-// }
-
-const handleContainerEnter = response => {
-	// console.log(handleContainerEnter)
-}
 
 const init = () => {
 
 	// Initiate the scrollama
 	const scroller = scrollama()
+	let timeline
 
 	const container = document.querySelector(".stories")
 	const step = Array.from(container.querySelectorAll(".story"))
@@ -77,15 +49,18 @@ const init = () => {
 		data
 	})
 
-	// if (window.innerWidth >= 800) {
-	const timeline = Timeline(timelineOptions)
+	if (window.innerWidth >= 800) {
+		timeline = Timeline(timelineOptions)
 			.buildSvg()
 			.buildScales()
 			.buildLine()
 			.buildAxis()
 			.buildMilestones()
-	// }
+	}
 
+	const handleStepEnter = response => {
+		timeline && timeline.buildMilestones(response.index)
+	}
 
 	// Initiate the PIXI canvas 
 	const app = loadCanvas(jsonURL)
@@ -114,8 +89,7 @@ const init = () => {
 				}
 
 		})
-		// .onStepEnter(handleStepEnter)
-		// .onContainerEnter(handleContainerEnter)
+		.onStepEnter(handleStepEnter)
 
 
 }

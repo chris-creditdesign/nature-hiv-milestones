@@ -21,10 +21,10 @@ function addMilestones(selection, timeline) {
 
 			timeline.tooltip.style.top = timeline.timeScale(d.start) + timeline.margins.top - (timeline.tooltip.offsetHeight / 2) + "px"
 
-			timeline.tooltip.classList.toggle("hidden")
+			document.getElementById("tooltip").classList.remove("hidden")
 		})
 		.on("mouseleave", () => {
-			timeline.tooltip.classList.toggle("hidden")
+			document.getElementById("tooltip").classList.add("hidden")
 		})
 }
 
