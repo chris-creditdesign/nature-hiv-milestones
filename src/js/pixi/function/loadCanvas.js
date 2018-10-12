@@ -36,6 +36,9 @@ const loadCanvas = function(jsonURL) {
 	// app.stage.filterArea = new PIXI.Rectangle(0, 0, window.innerWidth, height)
 	// app.stage.filters = [blurFilter, colorMatrixFilter]
 
+	const noise = new PIXI.filters.NoiseFilter(0.05)
+	app.stage.filters = [noise]
+
 
 	// ticker.add((deltaTime) => {
 	// 	alpha += 0.05
