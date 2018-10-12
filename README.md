@@ -24,6 +24,12 @@ To create minified, autoprefixed css and js files:
 
 ## To do:
 
+
+- Right viroid comes in from the right
+- Make timeline buttons work
+- Cell to cell transmission 
+- Add mottled effect, ripples, dotted shading... 
+
 - Apply filter just to container
 - Add nucleus group
 - Add cell to cell transmission

@@ -28,7 +28,7 @@ const buildBackgroundPositionOptions = data => {
 
 	options.impact = {}
 	options.impact.start = randomInt(20,50) / 100
-	options.impact.end = randomInt(50,75) / 100
+	options.impact.end = randomInt(60,85) / 100
 
 
 	return options

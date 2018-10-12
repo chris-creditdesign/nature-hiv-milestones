@@ -1,7 +1,7 @@
 import * as PIXI from 'pixi.js'
 import randomInt from '../../helpers/randomInt'
 
-const Cell = function(texture) {
+const Cell = function(texture, name) {
 
 	/*
 		If textures is an array handle as an array
@@ -12,7 +12,7 @@ const Cell = function(texture) {
 	PIXI.Sprite.call(this, texture)
 
 	this.anchor.set(0.5)
-	this.name = "cell"
+	this.name = name
 
 	// const scaleOffset = randomInt(60,100) / 100
 

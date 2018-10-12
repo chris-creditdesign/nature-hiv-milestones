@@ -16,7 +16,7 @@ const AlphaContainer = function(width, height, textures) {
 	// this.filters = [alphaFilter]
 
 	Array.from({length: 20}).forEach( () => {
-		const cell = new Cell(textures["cell-complete.png"])
+		const cell = new Cell(textures["cell-complete.png"], "cell")
 
 		cell.x = randomInt(0,width)
 		cell.y = randomInt(0,height)

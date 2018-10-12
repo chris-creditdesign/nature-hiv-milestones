@@ -45,7 +45,7 @@ const onAssetsLoaded = function(app, resources, jsonURl) {
 	// alphaContainer.filters = [alphaFilter]
 
 	app.stage.addChild( alphaContainer, 
-						cellContainerA, 
+						cellContainerA,
 						cellContainerB
 						)
 	

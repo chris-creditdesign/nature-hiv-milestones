@@ -32,7 +32,7 @@
 	"spriteSourceSize": {"x":0,"y":0,"w":250,"h":250},
 	"sourceSize": {"w":250,"h":250}
 },
-"cell-front.png":
+"cell-front-infected.png":
 {
 	"frame": {"x":0,"y":1000,"w":250,"h":250},
 	"rotated": false,
@@ -40,7 +40,7 @@
 	"spriteSourceSize": {"x":0,"y":0,"w":250,"h":250},
 	"sourceSize": {"w":250,"h":250}
 },
-"cell-nucleus.png":
+"cell-front.png":
 {
 	"frame": {"x":0,"y":1250,"w":250,"h":250},
 	"rotated": false,
@@ -48,9 +48,17 @@
 	"spriteSourceSize": {"x":0,"y":0,"w":250,"h":250},
 	"sourceSize": {"w":250,"h":250}
 },
+"cell-nucleus.png":
+{
+	"frame": {"x":0,"y":1500,"w":250,"h":250},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":250,"h":250},
+	"sourceSize": {"w":250,"h":250}
+},
 "virus-back.png":
 {
-	"frame": {"x":0,"y":1500,"w":50,"h":50},
+	"frame": {"x":0,"y":1750,"w":50,"h":50},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":50,"h":50},
@@ -58,7 +66,7 @@
 },
 "virus-front.png":
 {
-	"frame": {"x":50,"y":1500,"w":50,"h":50},
+	"frame": {"x":50,"y":1750,"w":50,"h":50},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":50,"h":50},
@@ -66,7 +74,7 @@
 },
 "virus-nucleus.png":
 {
-	"frame": {"x":100,"y":1500,"w":50,"h":50},
+	"frame": {"x":100,"y":1750,"w":50,"h":50},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":50,"h":50},
@@ -77,8 +85,8 @@
 	"version": "1.0",
 	"image": "hiv-cells.png",
 	"format": "RGBA8888",
-	"size": {"w":250,"h":1550},
+	"size": {"w":250,"h":1800},
 	"scale": "1",
-	"smartupdate": "$TexturePacker:SmartUpdate:d1a138183837e50a908165386a9b7723:3b1bc88424ede3316f9ca3ca2df882a3:f87d003e40e60934b23c97d96f744012$"
+	"smartupdate": "$TexturePacker:SmartUpdate:3331642e41d6d13d6eebc44b3ea87779:aff7bfbb6de0919d373c97b954b20638:f87d003e40e60934b23c97d96f744012$"
 }
 }

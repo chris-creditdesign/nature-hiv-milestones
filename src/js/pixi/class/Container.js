@@ -34,18 +34,22 @@ const Container = function(target, orientation, name, textures) {
 		nucleusContainer.addChild(virusNucleus)
 	})
 
-	const cellBack = new Cell(textures["cell-back.png"])
+	const cellBack = new Cell(textures["cell-back.png"], "cell")
 	cellBack.x = x
 	cellBack.y = y
-	const cellFront = new Cell(textures["cell-front.png"])
+	const cellFront = new Cell(textures["cell-front.png"], "cell")
 	cellFront.x = x
 	cellFront.y = y
-	const cellNucleus = new Cell(textures["cell-nucleus.png"])
+	const cellFrontInfected = new Cell(textures["cell-front-infected.png"], "cell-front-infected")
+	cellFrontInfected.x = x
+	cellFrontInfected.y = y
+	cellFrontInfected.alpha = 0
+	const cellNucleus = new Cell(textures["cell-nucleus.png"], "cell")
 	cellNucleus.x = x
 	cellNucleus.y = y
 
 	backContainer.addChild(cellBack)
-	frontContainer.addChild(cellFront)
+	frontContainer.addChild(cellFront, cellFrontInfected)
 	nucleusContainer.addChild(cellNucleus)
 
 	// Array.from({length: 4}).forEach( () => {
