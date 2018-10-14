@@ -17,8 +17,8 @@ const Container = function(target, orientation, name, textures) {
 	this.backgroundPositions = BackgroundPosition(backgroundPositionOptions)
 
 	this.backgroundPositions.init()
-
-	const {x, y} = this.backgroundPositions.midPoint
+	const x = this.backgroundPositions.midPoint.x * this.backgroundPositions.width
+	const y = this.backgroundPositions.midPoint.y * this.backgroundPositions.height
 
 	const backContainer = new PIXI.Container()
 	const frontContainer = new PIXI.Container()

@@ -24,10 +24,10 @@ To create minified, autoprefixed css and js files:
 
 ## To do:
 
-
-- Make timeline buttons work\
 - Resize canvas
+- Throttle resize canvas
 - Cell to cell transmission 
+- Background colour same as pixi container
 - Add mottled effect, ripples, dotted shading... 
 - Add side by side dot, for matching dates
 - Right viroid comes in from the right

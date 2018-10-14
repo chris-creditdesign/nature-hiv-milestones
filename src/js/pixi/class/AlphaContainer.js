@@ -2,25 +2,24 @@ import * as PIXI from 'pixi.js'
 import randomInt from '../../helpers/randomInt'
 import Cell from './Cell'
 
-const AlphaContainer = function(width, height, textures) {
+const AlphaContainer = function(width, height, textures, number, blur, alpha) {
 	PIXI.Container.call(this)
 
 	this.name = "alpha"
 
-	// const width = this.backgroundPositions.width
-	// const height = this.backgroundPositions.height
-
-	// const alphaFilter = new PIXI.filters.AlphaFilter(alpha)
+	const alphaFilter = new PIXI.filters.AlphaFilter(alpha)
 	
-	// this.filterArea = new PIXI.Rectangle(0, 0, width, height)
-	// this.filters = [alphaFilter]
+	const blurFilter = new PIXI.filters.BlurFilter(blur)
+	this.filterArea = new PIXI.Rectangle(0, 0, width, height)
+	this.filters = [blurFilter, alphaFilter]
 
-	Array.from({length: 20}).forEach( () => {
+	Array.from({length: number}).forEach( () => {
 		const cell = new Cell(textures["cell-complete.png"], "cell")
 
-		cell.x = randomInt(0,width)
-		cell.y = randomInt(0,height)
-		cell.alpha = randomInt(15,30) / 100
+		cell.offSetX = Math.random()
+		cell.offSetY = Math.random()
+		cell.x = cell.offSetX * width
+		cell.y = cell.offSetY * height
 
 		this.addChild(cell)
 	})

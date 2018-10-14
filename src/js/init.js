@@ -7,6 +7,7 @@ import buildTimelineOptions from './timeline/buildTimelineOptions'
 
 import loadCanvas from './pixi/function/loadCanvas'
 import updateCanvas from './pixi/function/updateCanvas'
+import resizeCanvas from './pixi/function/resizeCanvas'
 
 const jsonURL = "img/hiv-cells.json"
 
@@ -24,6 +25,7 @@ const init = () => {
 	// Initiate the scrollama
 	const scroller = scrollama()
 	let timeline
+	let counter = 0.8
 
 	const container = document.querySelector(".stories")
 	const step = Array.from(container.querySelectorAll(".story"))
@@ -82,7 +84,7 @@ const init = () => {
 				const section = 1 / step.length
 				const stepsSoFar = index / step.length
 				const thisStepProgress = section * progress
-				const counter = stepsSoFar + thisStepProgress
+				counter = stepsSoFar + thisStepProgress
 
 				if (animationActive) {
 					updateCanvas(app, counter)
@@ -90,6 +92,11 @@ const init = () => {
 
 		})
 		.onStepEnter(handleStepEnter)
+
+	window.addEventListener("resize", () => {
+		timeline && timeline.updateSvg()
+		app && resizeCanvas(app, counter)
+	})
 
 
 }

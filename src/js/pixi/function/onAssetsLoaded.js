@@ -15,19 +15,11 @@ const onAssetsLoaded = function(app, resources, jsonURl) {
 
 	const textures = resources[jsonURl].textures
 
-	const alphaContainer = new AlphaContainer(width, height, textures)
+	const alphaContainerB = new AlphaContainer(width, height, textures, 10, 4, 0.6)
+	const alphaContainerC = new AlphaContainer(width, height, textures, 5, 1, 0.8)
 
 	const cellContainerA = new Container("#bg-container", "left", "cellContainerA", textures)
 	const cellContainerB = new Container("#bg-container", "right", "cellContainerB", textures)
-	// const cellContainerC = new Container("#bg-container", "left", "cellContainerC", textures)
-	// const cellContainerD = new Container("#bg-container", "right", "cellContainerD", textures)
-	
-	// const cellContainerRightA = new Container("#bg-container", "right", "cell", 0.3)
-	// const cellContainerCentreA = new Container("#bg-container", "centre", "cell", 0.5)
-	// const cellContainerLeftB = new Container("#bg-container", "left", "cell", 1)
-	// const cellContainerRightB = new Container("#bg-container", "right", "cell", 1)
-	// const cellContainerCenterB = new Container("#bg-container", "centre", "cell", 1)
-
 
 	// This should go into the AlphaContainer class 
 	// Array.from({length: 10}).forEach( () => {
@@ -44,7 +36,8 @@ const onAssetsLoaded = function(app, resources, jsonURl) {
 	// alphaContainer.filterArea = new PIXI.Rectangle(0, 0, width, height)
 	// alphaContainer.filters = [alphaFilter]
 
-	app.stage.addChild( alphaContainer, 
+	app.stage.addChild( alphaContainerB,
+						alphaContainerC, 
 						cellContainerA,
 						cellContainerB
 						)

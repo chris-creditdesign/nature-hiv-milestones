@@ -1,7 +1,7 @@
 import buildSvg from './buildSvg'
-import buildMidpoint from './buildMidpoint'
 import buildPaths from './buildPaths'
 import getPositions from './getPositions'
+import updateSvg from './updateSvg'
 import init from './init'
 
 /**
@@ -26,11 +26,9 @@ const BackgroundPosition = options => {
 	return Object.assign(
 			{},
 			buildSvg,
-			buildMidpoint,
 			buildPaths,
-			// buildCells,
-			// updateCells,
 			getPositions,
+			updateSvg,
 			init,
 			options
 		)
