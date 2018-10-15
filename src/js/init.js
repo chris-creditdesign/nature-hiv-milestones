@@ -8,6 +8,7 @@ import buildTimelineOptions from './timeline/buildTimelineOptions'
 import loadCanvas from './pixi/function/loadCanvas'
 import updateCanvas from './pixi/function/updateCanvas'
 import resizeCanvas from './pixi/function/resizeCanvas'
+import debounce from './helpers/debounce'
 
 const jsonURL = "img/hiv-cells.json"
 
@@ -93,11 +94,14 @@ const init = () => {
 		})
 		.onStepEnter(handleStepEnter)
 
-	window.addEventListener("resize", () => {
-		timeline && timeline.updateSvg()
-		app && resizeCanvas(app, counter)
-	})
-
+	window.addEventListener("resize", debounce(
+		() => {
+			console.log("We're resizing!")
+			timeline && timeline.updateSvg()
+			app && resizeCanvas(app, counter)
+			
+		}, 250)
+	)
 
 }
 

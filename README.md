@@ -24,14 +24,12 @@ To create minified, autoprefixed css and js files:
 
 ## To do:
 
-- De-bounce Resize canvas
-- Remove flash on opening
-- Throttle resize canvas
+- Remove trailing line from timeline
 - Cell to cell transmission 
-- Background colour same as pixi container
 - Add mottled effect, ripples, dotted shading... 
 - Add side by side dot, for matching dates
 - Right viroid comes in from the right
+
 
 - Add cell to cell transmission
 - Make cell die after budding
