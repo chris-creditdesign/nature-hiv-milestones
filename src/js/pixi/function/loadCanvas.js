@@ -18,7 +18,7 @@ const loadCanvas = function(jsonURL) {
 			{transparent: true, antialias: true}
 		)
 
-	// app.stage.alpha = 0
+	app.stage.alpha = 0
 
 	PIXI.loader
 		.add(jsonURL)
