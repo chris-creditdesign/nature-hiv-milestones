@@ -7,7 +7,8 @@ const updateCanvas = function(app, counter) {
 			y: container.backgroundPositions.midPoint.y * container.backgroundPositions.height
 		}
 
-		const {start, end} = container.backgroundPositions.impact
+		const impactStart = container.backgroundPositions.impact.start
+		const impactEnd = container.backgroundPositions.impact.end
 
 
 		container.children.forEach( innerContainer => {
@@ -24,10 +25,10 @@ const updateCanvas = function(app, counter) {
 			innerContainer.children.filter( d => d.name === "cell-front-infected").forEach( cell => {
 				let progress = 0
 				
-				if (counter > start && counter <= end ) {
-					const total = (end - start) * 100 
-					progress = (counter - start) * 100 / total
-				} else if (counter > end) {
+				if (counter > impactStart && counter <= impactEnd ) {
+					const total = (impactEnd - impactStart) * 100 
+					progress = (counter - impactStart) * 100 / total
+				} else if (counter > impactEnd) {
 					progress = 1
 				}
 

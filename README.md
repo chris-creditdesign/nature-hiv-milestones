@@ -24,7 +24,8 @@ To create minified, autoprefixed css and js files:
 
 ## To do:
 
-- Resize canvas
+- De-bounce Resize canvas
+- Remove flash on opening
 - Throttle resize canvas
 - Cell to cell transmission 
 - Background colour same as pixi container

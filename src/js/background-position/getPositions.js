@@ -10,8 +10,8 @@ const getPositions = function(counter) {
 	// The default position for all cells is the midpoint
 	const positions = new Array(4).fill(
 			{ 
-				x: this.midPoint.x, 
-				y: this.midPoint.y 
+				x: this.midPoint.x * this.width, 
+				y: this.midPoint.y * this.height
 			} 
 		)
 
