@@ -37,6 +37,7 @@ const loadCanvas = function(jsonURL) {
 	// app.stage.filters = [blurFilter, colorMatrixFilter]
 
 	const noise = new PIXI.filters.NoiseFilter(0.05)
+
 	app.stage.filters = [noise]
 
 

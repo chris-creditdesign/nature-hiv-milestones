@@ -36,6 +36,18 @@ const onAssetsLoaded = function(app, resources, jsonURl) {
 	// alphaContainer.filterArea = new PIXI.Rectangle(0, 0, width, height)
 	// alphaContainer.filters = [alphaFilter]
 
+	/*
+	** Reflection filter
+	const reflectionFilter = new filters.ReflectionFilter()
+	reflectionFilter.mirror = false
+	reflectionFilter.boundary = 0
+	reflectionFilter.waveLength = [0,100]
+	reflectionFilter.amplitude = [0,0]
+
+	this.filterArea = new PIXI.Rectangle(0, 0, this.backgroundPositions.width, this.backgroundPositions.height)
+	this.filters = [reflectionFilter]
+	*/
+
 	app.stage.addChild( alphaContainerB,
 						alphaContainerC, 
 						cellContainerA,

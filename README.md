@@ -24,6 +24,8 @@ To create minified, autoprefixed css and js files:
 
 ## To do:
 
+- Update layer filter area on window resize
+- Weirdness with counter position or resize 
 - Remove trailing line from timeline
 - Cell to cell transmission 
 - Add mottled effect, ripples, dotted shading... 

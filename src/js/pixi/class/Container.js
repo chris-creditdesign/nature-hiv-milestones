@@ -1,4 +1,5 @@
 import * as PIXI from 'pixi.js'
+import * as filters from 'pixi-filters'
 
 import BackgroundPosition from '../../background-position/BackgroundPosition'
 import buildBackgroundPositionOptions from '../../background-position/buildBackgroundPositionOptions'
@@ -52,23 +53,20 @@ const Container = function(target, orientation, name, textures) {
 	frontContainer.addChild(cellFront, cellFrontInfected)
 	nucleusContainer.addChild(cellNucleus)
 
-	// Array.from({length: 4}).forEach( () => {
-	// 	const virusBack = new Virus(textures["virus-back.png"])
-	// 	this.addChild(virusBack)
-	// })
-	
+	/*
+	** Displacement filter 
+	*/
 
+	const displacementSprite = new PIXI.Sprite.fromImage('img/water.png')
+	displacementSprite.texture.baseTexture.wrapMode = PIXI.WRAP_MODES.REPEAT
 
+	const displacementFilter = new PIXI.filters.DisplacementFilter(displacementSprite)
+	displacementFilter.scale.x = 0
+	displacementFilter.scale.y = 0
 
-	// Array.from({length: 4}).forEach( () => {
-	// 	const virusBack = new Virus(textures["virus-back.png"])
-	// 	const virusFront = new Virus(textures["virus-front.png"])
-	// 	const virusNucleus = new Virus(textures["virus-nucleus.png"])
-	// 	this.addChild(virusBack, virusFront, virusNucleus)
-	// })
+	this.filters = [displacementFilter]
 
-
-	this.addChild(backContainer, frontContainer, nucleusContainer)
+	this.addChild(backContainer, frontContainer, nucleusContainer, displacementSprite)
 
 }
 

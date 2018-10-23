@@ -10,6 +10,15 @@ const updateCanvas = function(app, counter) {
 		const impactStart = container.backgroundPositions.impact.start
 		const impactEnd = container.backgroundPositions.impact.end
 
+		if (counter > 0.9) {
+			const distortion = (counter - 0.9) * 10 * 50
+			container.filters[0].scale.x = distortion
+			container.filters[0].scale.y = distortion
+		} else {
+			container.filters[0].scale.x = 0
+			container.filters[0].scale.y = 0
+		}
+
 
 		container.children.forEach( innerContainer => {
 			innerContainer.children.filter( d => d.name === "virus").forEach( (cell, index) => {
