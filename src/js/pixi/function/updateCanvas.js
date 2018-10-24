@@ -12,11 +12,11 @@ const updateCanvas = function(app, counter) {
 
 		if (counter > 0.9) {
 			const distortion = (counter - 0.9) * 10 * 50
-			container.filters[0].scale.x = distortion
-			container.filters[0].scale.y = distortion
+			container.displacementFilter.scale.x = distortion
+			container.displacementFilter.scale.y = distortion
 		} else {
-			container.filters[0].scale.x = 0
-			container.filters[0].scale.y = 0
+			container.displacementFilter.scale.x = 0
+			container.displacementFilter.scale.y = 0
 		}
 
 
