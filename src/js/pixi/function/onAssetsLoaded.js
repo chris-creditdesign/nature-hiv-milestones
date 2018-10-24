@@ -15,8 +15,8 @@ const onAssetsLoaded = function(app, resources, jsonURl) {
 
 	const textures = resources[jsonURl].textures
 
-	const alphaContainerB = new AlphaContainer(width, height, textures, 10, 4, 0.6)
-	const alphaContainerC = new AlphaContainer(width, height, textures, 5, 1, 0.8)
+	const alphaContainerB = new AlphaContainer(width, height, textures, 5, "cell-complete-alpha-2.png")
+	const alphaContainerC = new AlphaContainer(width, height, textures, 10, "cell-complete-alpha-1.png")
 
 	const cellContainerA = new Container("#bg-container", "left", "cellContainerA", textures)
 	const cellContainerB = new Container("#bg-container", "right", "cellContainerB", textures)
@@ -79,10 +79,7 @@ const onAssetsLoaded = function(app, resources, jsonURl) {
 		if (alpha >= 1) {
 			ticker.stop()
 		}
- 
-		// alpha > 1 ?
-		// 	ticker.stop()
-		// 	: app.stage.alpha = alpha
+
 	});
 
 	ticker.start();

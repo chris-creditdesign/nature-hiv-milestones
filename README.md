@@ -24,6 +24,12 @@ To create minified, autoprefixed css and js files:
 
 ## To do:
 
+- Distortion filter area
+- Make animation on by default
+- Move ensighten script to top
+- Accessibility questions
+- Sort out amount of distortion on scroll
+- Remove alpha filter, use darker sprites instead
 - Update layer filter area on window resize
 - Weirdness with counter position or resize 
 - Remove trailing line from timeline
