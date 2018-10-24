@@ -12,7 +12,7 @@ import debounce from './helpers/debounce'
 
 const jsonURL = "img/hiv-cells.json"
 
-let animationActive = false
+let animationActive = true
 const checkbox = document.getElementById("animations")
 
 checkbox.addEventListener("change", function(){ 
@@ -26,7 +26,7 @@ const init = () => {
 	// Initiate the scrollama
 	const scroller = scrollama()
 	let timeline
-	let counter = 0.8
+	let counter = 0
 
 	const container = document.querySelector(".stories")
 	const step = Array.from(container.querySelectorAll(".story"))
@@ -96,7 +96,6 @@ const init = () => {
 
 	window.addEventListener("resize", debounce(
 		() => {
-			console.log("We're resizing!")
 			timeline && timeline.updateSvg()
 			app && resizeCanvas(app, counter)
 			
