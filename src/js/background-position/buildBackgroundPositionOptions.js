@@ -7,44 +7,10 @@ const buildBackgroundPositionOptions = data => {
 
 	options.width = document.documentElement.clientWidth
 	options.height = document.documentElement.clientHeight
-	// options.widthUnit = options.width / 4
-	// options.heightUnit = options.height / 4
 
 	options.paths = {}
 
-	// options.sectors = {}
-	// options.sectors.a = {
-	// 	min: 0.25 * 0, 
-	// 	max: 0.25 * 1
-	// }
-	// options.sectors.b = {
-	// 	min: 0.25 * 1, 
-	// 	max: 0.25 * 2
-	// }
-	// options.sectors.c = {
-	// 	min: 0.25 * 2, 
-	// 	max: 0.25 * 3
-	// }
-	// options.sectors.d = {
-	// 	min: 0.25 * 3, 
-	// 	max: 0.25 * 4
-	// }
-	// options.sectors.one = {
-	// 	min: 0.25 * 0, 
-	// 	max: 0.25 * 1}
-	// options.sectors.two = {
-	// 	min: 0.25 * 1,
-	// 	max: 0.25 * 2
-	// }
-	// options.sectors.three = {
-	// 	min: 0.25 * 2,
-	// 	max: 0.25 * 3
-	// }
-	// options.sectors.four = {
-	// 	min: 0.25 * 3, 
-	// 	max: 0.25 * 4
-	// }
-
+	/* ENTRY PATH */
 	options.entryPathControlA = {
 		x: randomInt(25,50) / 100,
 		y: randomInt(0,25) / 100
@@ -56,6 +22,7 @@ const buildBackgroundPositionOptions = data => {
 	}
 	// makeCoord(a, two),
 
+	/* EXIT PATH A */
 	options.exitPathAControlA = {
 		x: randomInt(25,50) / 100,
 		y: randomInt(0,25) / 100
@@ -67,6 +34,7 @@ const buildBackgroundPositionOptions = data => {
 	}
 	// makeCoord(a, two)
 
+	/* EXIT PATH B */
 	options.exitPathBControlA = {
 		x: randomInt(50,75) / 100,
 		y: randomInt(0,25) / 100
@@ -78,6 +46,7 @@ const buildBackgroundPositionOptions = data => {
 	}
 	// makeCoord(d, two),
 
+	/* EXIT PATH C */
 	options.exitPathCControlA = {
 		x: randomInt(75,100) / 100,
 		y: randomInt(50,75) / 100
@@ -89,6 +58,7 @@ const buildBackgroundPositionOptions = data => {
 	}
 	// makeCoord(c, four),
 
+	/* EXIT PATH D */
 	options.exitPathDControlA = {
 		x: randomInt(0,25) / 100,
 		y: randomInt(50,75) / 100
@@ -104,9 +74,14 @@ const buildBackgroundPositionOptions = data => {
 
 	options.orientation = data.orientation || "left"
 
-	options.impact = {}
-	options.impact.start = randomInt(20,50) / 100
-	options.impact.end = randomInt(60,85) / 100
+	// Used to control events on the timeline
+	// i.e. when things happen
+	options.progress = {
+		impactStart: randomInt(20,30) / 100,
+		impactEnd: randomInt(40,60) / 100,
+		connectionPoint: randomInt(70,80) / 100,
+		displacmentStart: randomInt(85,95) / 100
+	}
 
 	options.midPoint = {}
 	options.midPoint.y = randomInt(15, 85) / 100
@@ -116,8 +91,6 @@ const buildBackgroundPositionOptions = data => {
 	} else if (options.orientation === "right") {
 		options.midPoint.x = randomInt(75, 90) / 100
 	}
-
-
 
 	return options
 }

@@ -7,23 +7,12 @@
 		
 		path {
 			display: none;
-			// fill: none;
-			// stroke-width: 2px;
-			// stroke: red;
+			fill: none;
+			stroke-width: 2px;
+			
+			&.entry {stroke: red;}
+			&.exit {stroke: green;}
+			&.connecting {stroke: blue;}
 		}
-
-		// .cellGroup {
-		// 	filter:url('#goo');
-		// 	circle {
-		// 		fill: #9f7db7;
-		// 	}
-		// }
-
-		// .nucleusGroup {
-		// 	filter:url('#goo');
-		// 	circle {
-		// 		fill: #68417a;
-		// 	}
-		// }
 	}
 }

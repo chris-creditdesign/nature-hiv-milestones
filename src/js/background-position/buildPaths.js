@@ -91,6 +91,17 @@ const buildPaths = function() {
 		"exit"
 	)
 
+	// Straight line going from top right to midpoint
+	// for cell to cell transmission
+	this.paths.connectingPath= appendPath(
+		this.pathGroup,
+		{ x: this.width, y: 0},
+		{ x: this.width, y: 0},
+		midPoint,
+		midPoint,
+		"connecting"
+	)
+
 	return this
 }
 

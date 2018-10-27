@@ -7,18 +7,8 @@ const updateCanvas = function(app, counter) {
 			y: container.backgroundPositions.midPoint.y * container.backgroundPositions.height
 		}
 
-		const impactStart = container.backgroundPositions.impact.start
-		const impactEnd = container.backgroundPositions.impact.end
-
-		if (counter > 0.9) {
-			const distortion = (counter - 0.9) * 10 * 50
-			container.displacementFilter.scale.x = distortion
-			container.displacementFilter.scale.y = distortion
-		} else {
-			container.displacementFilter.scale.x = 0
-			container.displacementFilter.scale.y = 0
-		}
-
+		const { impactStart, impactEnd, connectionPoint, displacmentStart } = container.backgroundPositions.progress
+		const displacmentFilterTotal = 50
 
 		container.children.forEach( innerContainer => {
 			innerContainer.children.filter( d => d.name === "virus").forEach( (cell, index) => {
@@ -26,12 +16,32 @@ const updateCanvas = function(app, counter) {
 				cell.y = positions[index].y
 			})
 
-			innerContainer.children.filter( d => d.name !== "virus").forEach( (cell, index) => {
+			/*
+			** Connecting Cell position
+			*/
+			innerContainer.children.filter( d =>{ 
+				return d.name === "connecting-cell" || d.name === "connecting-cell-front-infected"
+			}).forEach( (cell, index) => {
+				cell.x = positions[4].x
+				cell.y = positions[4].y
+			})
+
+			/*
+			** Main Cell's position
+			*/
+			innerContainer.children.filter( d => {
+				return d.name === "cell" || d.name === "cell-front-infected"
+			}).forEach( (cell, index) => {
 				cell.x = midPoint.x
 				cell.y = midPoint.y
 			})
 
-			innerContainer.children.filter( d => d.name === "cell-front-infected").forEach( cell => {
+			/*
+			** Opacity of main Cell's infected region
+			*/
+			innerContainer.children.filter( d => {
+				return d.name === "cell-front-infected"
+			}).forEach( cell => {
 				let progress = 0
 				
 				if (counter > impactStart && counter <= impactEnd ) {
@@ -43,7 +53,37 @@ const updateCanvas = function(app, counter) {
 
 				cell.alpha = progress
 			})	
+
+			/*
+			** Opacity of connecting Cell's infected region
+			*/
+			innerContainer.children.filter( d => {
+				return d.name === "connecting-cell-front-infected"
+			}).forEach( cell => {
+				let progress = 0
+
+				if (counter > connectionPoint && counter <= displacmentStart ) {
+					const total = (displacmentStart - connectionPoint) * 100 
+					progress = (counter - connectionPoint) * 100 / total
+				} else if (counter > displacmentStart) {
+					progress = 1
+				}
+			
+				cell.alpha = progress
+			})
 		})
+
+		/*
+		**	Displacement filter amount 
+		*/
+		if (counter > displacmentStart) {
+			const distortion = (counter - displacmentStart) * 10 * displacmentFilterTotal
+			container.displacementFilter.scale.x = distortion
+			container.displacementFilter.scale.y = distortion
+		} else {
+			container.displacementFilter.scale.x = 0
+			container.displacementFilter.scale.y = 0
+		}
 	})
 	
 }

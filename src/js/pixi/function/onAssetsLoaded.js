@@ -17,7 +17,7 @@ const onAssetsLoaded = function(app, resources, jsonURl) {
 	const alphaContainerC = new AlphaContainer(width, height, textures, 10, "cell-complete-alpha-1.png")
 
 	const cellContainerA = new Container("#bg-container", "left", "cellContainerA", textures)
-	const cellContainerB = new Container("#bg-container", "right", "cellContainerB", textures)
+	const cellContainerB = new Container("#bg-container", "right", "cellContainerB", textures, true)
 
 	app.stage.addChild( alphaContainerB,
 						alphaContainerC, 
