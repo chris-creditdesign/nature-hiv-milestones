@@ -6,17 +6,22 @@ const buildSvg = function() {
 			.attr("class", "timeline")
 			.attr("width", this.totalWidth)
 			.attr("height", this.totalHeight)
+			.attr("roll", "group")
+			.attr("aria-labelledby", "timeline-title")
+
+		this.svg
+			.append("title")
+			.attr("id", "timeline-title")
+			.text("Milestones in HIV")
 
 		this.axisContainer = this.svg.append("g")
 			.attr("class", "axisContainer")
 			.attr("transform", `translate(${this.margins.left},${this.margins.top})`)
+			.attr("role", "presentation")
+			.attr("aria-hidden", "true")
 		
 		this.milestoneContainer = this.svg.append("g")
 			.attr("class", "milestoneContainer")
-			.attr("transform", `translate(${this.margins.left},${this.margins.top})`)
-
-		this.activeMilestoneContainer = this.svg.append("g")
-			.attr("class", "activeMilestoneContainer")
 			.attr("transform", `translate(${this.margins.left},${this.margins.top})`)
 
 		return this

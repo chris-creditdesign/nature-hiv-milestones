@@ -25,14 +25,13 @@
 		stroke: #fff;
 		stroke-width: 2px;
 		cursor: pointer;
-		transition: fill 300ms ease-in-out;
 		
 		&:hover {
 			fill: #c40226;
 		}
 	}
 
-	svg .activeMilestoneContainer circle {
+	svg a[aria-current] circle {
 		fill: #c40226;
 	}
 
