@@ -40,10 +40,10 @@ To create minified, autoprefixed css and js files:
 
 
 - Add cell to cell transmission
-- Make cell die after budding
+- Add pa11y test
+- Add eslint test
 
 - Update SVG to just provide coordinates - can be rendered in canvas or svg. Does the svg have to be added to the page? 
-- Add pa11y test
 - Remove modernizr
 - No js class on body?
 - Re do CSS as BEM
