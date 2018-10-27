@@ -18,7 +18,14 @@ function addMilestones(selection, timeline, index = 0) {
 				.scrollIntoView({ block: 'start',  behavior: 'smooth' })
 		})
 	  .append("circle")
-		.attr("cx", timeline.width * 0.75)
+		.attr("cx", d => {
+			if (d.concurrentAtTime) {
+				return timeline.width * 0.75 + timeline.width / 5
+			} else {
+				return timeline.width * 0.75
+			}
+			
+		})
 		.attr("cy", d => timeline.timeScale(d.start))
 		.attr("r", timeline.width / 10)
 		.on("mouseenter", (d) => {

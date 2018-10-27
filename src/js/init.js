@@ -35,12 +35,22 @@ const init = () => {
 
 		return {
 			start: parseInt(elem.dataset.start, 10),
-			end: parseInt(elem.dataset.end, 10),
+			end: elem.dataset.end ? parseInt(elem.dataset.end, 10) : null,
+			concurrentAtTime: false,
 			id: elem.getAttribute("id"),
 			name: elem.getAttribute("id").split("-").map( s => s.charAt(0).toUpperCase() + s.slice(1) ).join(" "),
 			title: elem.querySelector("h2").innerText,
 			number: index + 1
 		}
+	})
+
+	// Presuming there is a maximum two milestones on the same start date
+	// add a second/move left attribute to the second one
+	data.map( (elem, index, arr) => {
+		const start = elem.start
+		if (arr.slice(0,index).filter( item => item.start === start).length) {
+			elem.concurrentAtTime = true
+		} 
 	})
 
 	data.startYear = 1910

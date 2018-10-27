@@ -65,6 +65,7 @@
 		width: 200px;
 		z-index: 1000;
 		transition: opacity 100ms linear;
+		pointer-events: none;
 
 		&.hidden {
 			opacity: 0;
