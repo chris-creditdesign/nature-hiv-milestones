@@ -2,10 +2,10 @@
 	height: 100vh;
 	position: -webkit-sticky;
 	position: sticky;
-	// width: 120px;
 	left: 0;
 	top: 0;
 	display: none;
+	z-index: 1000;
 
 	background: white;
 
