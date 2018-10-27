@@ -92,7 +92,7 @@ header.main {
 				border-top: none;
 			}
 
-			&:hover, &.active {
+			&:hover, &[aria-current] {
 				background-color: #ffffff;
 
 				a {

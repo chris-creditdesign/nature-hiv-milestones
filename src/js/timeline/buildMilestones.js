@@ -38,8 +38,7 @@ function addMilestones(selection, timeline, index = 0) {
 
 	selection
 		.attr("aria-current", (d,i) => {
-			console.log("We're updatding! ")
-			return i === index ? "current" : null
+			return i === index ? "milestone" : null
 		})
 
 }
