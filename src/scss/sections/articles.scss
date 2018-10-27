@@ -1,5 +1,4 @@
 .article-container {
-	// position: relative;
 
     display: flex;
     justify-content: space-between;
@@ -116,6 +115,10 @@
 	.text-section, .video-section, .podcast-section {
 
 
+	}
+
+	.image-flex-container {
+		margin: 0;
 	}
 
 	.with-image {
