@@ -1,14 +1,12 @@
-import makePathString from '../helpers/makePathString.js'
+import makePathString from '../helpers/makePathString'
 
-const appendPath = function(group, start, controlA, controlB, end, className) {	
-
-	return group.append("path")
-		.attr("class", className)
-		.attr("d", () => makePathString(start, controlA, controlB, end))
+function appendPath(group, start, controlA, controlB, end, className) {
+	return group.append('path')
+		.attr('class', className)
+		.attr('d', () => makePathString(start, controlA, controlB, end))
 }
 
-const buildPaths = function() {
-
+function buildPaths() {
 	// const {a, b, c, d, one, two, three, four} = this.sectors
 
 	const midPoint = {
@@ -18,88 +16,88 @@ const buildPaths = function() {
 
 	this.paths.entryPath = appendPath(
 		this.pathGroup,
-		{ x: 0, y: 0},
+		{ x: 0, y: 0 },
 		{
-			x: this.entryPathControlA.x * this.width, 
+			x: this.entryPathControlA.x * this.width,
 			y: this.entryPathControlA.y * this.height
 		},
 		{
-			x: this.entryPathControlB.x * this.width, 
-			y: this.entryPathControlB.y * this.height	
+			x: this.entryPathControlB.x * this.width,
+			y: this.entryPathControlB.y * this.height
 		},
 		midPoint,
-		"entry"
+		'entry'
 	)
 
 	this.paths.exitPathA = appendPath(
 		this.pathGroup,
 		midPoint,
 		{
-			x: this.exitPathAControlA.x * this.width, 
+			x: this.exitPathAControlA.x * this.width,
 			y: this.exitPathAControlA.y * this.height
 		},
 		{
-			x: this.exitPathAControlB.x * this.width, 
-			y: this.exitPathAControlB.y * this.height	
+			x: this.exitPathAControlB.x * this.width,
+			y: this.exitPathAControlB.y * this.height
 		},
-		{ x: 0, y: 0},
-		"exit"
+		{ x: 0, y: 0 },
+		'exit'
 	)
 
 	this.paths.exitPathB = appendPath(
 		this.pathGroup,
 		midPoint,
 		{
-			x: this.exitPathBControlA.x * this.width, 
+			x: this.exitPathBControlA.x * this.width,
 			y: this.exitPathBControlA.y * this.height
 		},
 		{
-			x: this.exitPathBControlB.x * this.width, 
-			y: this.exitPathBControlB.y * this.height	
+			x: this.exitPathBControlB.x * this.width,
+			y: this.exitPathBControlB.y * this.height
 		},
-		{ x: this.width, y: 0},
-		"exit"
+		{ x: this.width, y: 0 },
+		'exit'
 	)
 
 	this.paths.exitPathC = appendPath(
 		this.pathGroup,
 		midPoint,
 		{
-			x: this.exitPathCControlA.x * this.width, 
+			x: this.exitPathCControlA.x * this.width,
 			y: this.exitPathCControlA.y * this.height
 		},
 		{
-			x: this.exitPathCControlB.x * this.width, 
-			y: this.exitPathCControlB.y * this.height	
+			x: this.exitPathCControlB.x * this.width,
+			y: this.exitPathCControlB.y * this.height
 		},
-		{ x: this.width, y: this.height},
-		"exit"
+		{ x: this.width, y: this.height },
+		'exit'
 	)
 
 	this.paths.exitPathD = appendPath(
 		this.pathGroup,
 		midPoint,
 		{
-			x: this.exitPathDControlA.x * this.width, 
+			x: this.exitPathDControlA.x * this.width,
 			y: this.exitPathDControlA.y * this.height
 		},
 		{
-			x: this.exitPathDControlB.x * this.width, 
-			y: this.exitPathDControlB.y * this.height	
+			x: this.exitPathDControlB.x * this.width,
+			y: this.exitPathDControlB.y * this.height
 		},
-		{ x: 0, y: this.height},
-		"exit"
+		{ x: 0, y: this.height },
+		'exit'
 	)
 
 	// Straight line going from top right to midpoint
 	// for cell to cell transmission
-	this.paths.connectingPath= appendPath(
+	this.paths.connectingPath = appendPath(
 		this.pathGroup,
-		{ x: this.width, y: 0},
-		{ x: this.width, y: 0},
+		{ x: this.width, y: 0 },
+		{ x: this.width, y: 0 },
 		midPoint,
 		midPoint,
-		"connecting"
+		'connecting'
 	)
 
 	return this

@@ -1,17 +1,13 @@
-import "../scss/index.scss"
+import '../scss/index.scss'
 
 function checkWidth() {
-
-
 	// Only load the timeline code if
 	// the window is wider than 600px
 	if (window.innerWidth > 600) {
-		import(/* webpackChunkName: "init" */ './init').then(init => {
+		import(/* webpackChunkName: "init" */ './init').then((init) => {
 			init.default()
-			
-		}).catch(error => 'An error occurred while loading the component')
+		}).catch(error => new Error(error, 'An error occurred while loading the component'))
 	}
 }
 
-document.addEventListener("DOMContentLoaded", checkWidth)
-
+document.addEventListener('DOMContentLoaded', checkWidth)

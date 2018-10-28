@@ -1,6 +1,6 @@
-import { scaleLinear, scaleBand } from 'd3-scale'
+import { scaleLinear } from 'd3-scale'
 
-const buildScales = function() {
+function buildScales() {
 	this.timeScale = scaleLinear()
 		.domain([this.data.startYear, this.data.endYear])
 		.range([0, this.height])

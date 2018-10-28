@@ -1,11 +1,10 @@
 import * as PIXI from 'pixi.js'
 
-const Virus = function(texture) {
-
+function Virus(texture) {
 	PIXI.Sprite.call(this, texture)
 
 	this.anchor.set(0.5)
-	this.name = "virus"
+	this.name = 'virus'
 }
 
 Virus.prototype = Object.create(PIXI.Sprite.prototype)

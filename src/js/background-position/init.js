@@ -1,5 +1,4 @@
-const init = function() {
-
+function init() {
 	this.buildSvg()
 		.buildPaths()
 

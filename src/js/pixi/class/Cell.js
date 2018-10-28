@@ -1,25 +1,10 @@
 import * as PIXI from 'pixi.js'
-import randomInt from '../../helpers/randomInt'
 
-const Cell = function(texture, name) {
-
-	/*
-		If textures is an array handle as an array
-	*/
-
-	// this.textures = texture
-	
+function Cell(texture, name) {
 	PIXI.Sprite.call(this, texture)
 
 	this.anchor.set(0.5)
 	this.name = name
-
-	// const scaleOffset = randomInt(60,100) / 100
-
-	// this.rotation = randomInt(0,180) * Math.PI / 180
-
-	// this.scale.set(scaleOffset, scaleOffset)
-
 }
 
 Cell.prototype = Object.create(PIXI.Sprite.prototype)

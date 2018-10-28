@@ -6,18 +6,18 @@ import buildMilestones from './buildMilestones'
 import updateSvg from './updateSvg'
 import hideTooltip from './hideTooltip'
 
-const Timeline = options => {
+function Timeline(options) {
 	return Object.assign(
-			{},
-			buildSvg,
-			buildScales,
-			buildAxis,
-			buildLine,
-			buildMilestones,
-			hideTooltip,
-			updateSvg,
-			options
-		)
+		{},
+		buildSvg,
+		buildScales,
+		buildAxis,
+		buildLine,
+		buildMilestones,
+		hideTooltip,
+		updateSvg,
+		options
+	)
 }
 
 export default Timeline

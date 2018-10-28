@@ -1,17 +1,19 @@
-const updateCanvas = function(app, counter) {
-
-	app.stage.children.filter( elem => elem.name !== "alpha").forEach( container => {
+/* eslint-disable no-param-reassign */
+function updateCanvas(app, counter) {
+	app.stage.children.filter(elem => elem.name !== 'alpha').forEach((container) => {
 		const positions = container.backgroundPositions.getPositions(counter)
 		const midPoint = {
 			x: container.backgroundPositions.midPoint.x * container.backgroundPositions.width,
 			y: container.backgroundPositions.midPoint.y * container.backgroundPositions.height
 		}
 
-		const { impactStart, impactEnd, connectionPoint, displacmentStart } = container.backgroundPositions.progress
+		const {
+			impactStart, impactEnd, connectionPoint, displacmentStart
+		} = container.backgroundPositions.progress
 		const displacmentFilterTotal = 50
 
-		container.children.forEach( innerContainer => {
-			innerContainer.children.filter( d => d.name === "virus").forEach( (cell, index) => {
+		container.children.forEach((innerContainer) => {
+			innerContainer.children.filter(d => d.name === 'virus').forEach((cell, index) => {
 				cell.x = positions[index].x
 				cell.y = positions[index].y
 			})
@@ -19,9 +21,7 @@ const updateCanvas = function(app, counter) {
 			/*
 			** Connecting Cell position
 			*/
-			innerContainer.children.filter( d =>{ 
-				return d.name === "connecting-cell" || d.name === "connecting-cell-front-infected"
-			}).forEach( (cell, index) => {
+			innerContainer.children.filter(d => d.name === 'connecting-cell' || d.name === 'connecting-cell-front-infected').forEach((cell) => {
 				cell.x = positions[4].x
 				cell.y = positions[4].y
 			})
@@ -29,9 +29,7 @@ const updateCanvas = function(app, counter) {
 			/*
 			** Main Cell's position
 			*/
-			innerContainer.children.filter( d => {
-				return d.name === "cell" || d.name === "cell-front-infected"
-			}).forEach( (cell, index) => {
+			innerContainer.children.filter(d => d.name === 'cell' || d.name === 'cell-front-infected').forEach((cell) => {
 				cell.x = midPoint.x
 				cell.y = midPoint.y
 			})
@@ -39,42 +37,38 @@ const updateCanvas = function(app, counter) {
 			/*
 			** Opacity of main Cell's infected region
 			*/
-			innerContainer.children.filter( d => {
-				return d.name === "cell-front-infected"
-			}).forEach( cell => {
+			innerContainer.children.filter(d => d.name === 'cell-front-infected').forEach((cell) => {
 				let progress = 0
-				
-				if (counter > impactStart && counter <= impactEnd ) {
-					const total = (impactEnd - impactStart) * 100 
+
+				if (counter > impactStart && counter <= impactEnd) {
+					const total = (impactEnd - impactStart) * 100
 					progress = (counter - impactStart) * 100 / total
 				} else if (counter > impactEnd) {
 					progress = 1
 				}
 
 				cell.alpha = progress
-			})	
+			})
 
 			/*
 			** Opacity of connecting Cell's infected region
 			*/
-			innerContainer.children.filter( d => {
-				return d.name === "connecting-cell-front-infected"
-			}).forEach( cell => {
+			innerContainer.children.filter(d => d.name === 'connecting-cell-front-infected').forEach((cell) => {
 				let progress = 0
 
-				if (counter > connectionPoint && counter <= displacmentStart ) {
-					const total = (displacmentStart - connectionPoint) * 100 
+				if (counter > connectionPoint && counter <= displacmentStart) {
+					const total = (displacmentStart - connectionPoint) * 100
 					progress = (counter - connectionPoint) * 100 / total
 				} else if (counter > displacmentStart) {
 					progress = 1
 				}
-			
+
 				cell.alpha = progress
 			})
 		})
 
 		/*
-		**	Displacement filter amount 
+		**	Displacement filter amount
 		*/
 		if (counter > displacmentStart) {
 			const distortion = (counter - displacmentStart) * 10 * displacmentFilterTotal
@@ -85,7 +79,6 @@ const updateCanvas = function(app, counter) {
 			container.displacementFilter.scale.y = 0
 		}
 	})
-	
 }
 
 export default updateCanvas

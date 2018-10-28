@@ -1,16 +1,15 @@
 import * as PIXI from 'pixi.js'
-import * as filters from 'pixi-filters'
 
 import BackgroundPosition from '../../background-position/BackgroundPosition'
 import buildBackgroundPositionOptions from '../../background-position/buildBackgroundPositionOptions'
 import Cell from './Cell'
 import Virus from './Virus'
 
-const Container = function(target, orientation, name, textures, connecting = false) {
+function Container(target, orientation, name, textures, connecting = false) {
 	PIXI.Container.call(this)
 	this.name = name
 
-	const backgroundPositionOptions = buildBackgroundPositionOptions( {
+	const backgroundPositionOptions = buildBackgroundPositionOptions({
 		target,
 		orientation
 	})
@@ -18,8 +17,6 @@ const Container = function(target, orientation, name, textures, connecting = fal
 	this.backgroundPositions = BackgroundPosition(backgroundPositionOptions)
 
 	this.backgroundPositions.init()
-	// const x = this.backgroundPositions.midPoint.x * this.backgroundPositions.width
-	// const y = this.backgroundPositions.midPoint.y * this.backgroundPositions.height
 
 	/*
 	** 4 Viruses
@@ -28,14 +25,14 @@ const Container = function(target, orientation, name, textures, connecting = fal
 	const virusFrontContainer = new PIXI.Container()
 	const virusNucleusContainer = new PIXI.Container()
 
-	Array.from({length: 4}).forEach( () => {
-		const virusBack = new Virus(textures["virus-back.png"])
+	Array.from({ length: 4 }).forEach(() => {
+		const virusBack = new Virus(textures['virus-back.png'])
 		virusBackContainer.addChild(virusBack)
-		
-		const virusFront = new Virus(textures["virus-front.png"])
+
+		const virusFront = new Virus(textures['virus-front.png'])
 		virusFrontContainer.addChild(virusFront)
-		
-		const virusNucleus = new Virus(textures["virus-nucleus.png"])
+
+		const virusNucleus = new Virus(textures['virus-nucleus.png'])
 		virusNucleusContainer.addChild(virusNucleus)
 	})
 
@@ -46,49 +43,43 @@ const Container = function(target, orientation, name, textures, connecting = fal
 	const cellFrontContainer = new PIXI.Container()
 	const cellNucleusContainer = new PIXI.Container()
 
-	const cellBack = new Cell(textures["cell-back.png"], "cell")
-	// cellBack.x = x
-	// cellBack.y = y
-	
+	const cellBack = new Cell(textures['cell-back.png'], 'cell')
+
 	cellBackContainer.addChild(cellBack)
-	
-	const cellFront = new Cell(textures["cell-front.png"], "cell")
-	// cellFront.x = x
-	// cellFront.y = y
-	
-	const cellFrontInfected = new Cell(textures["cell-front-infected.png"], "cell-front-infected")
-	// cellFrontInfected.x = x
-	// cellFrontInfected.y = y
+
+	const cellFront = new Cell(textures['cell-front.png'], 'cell')
+
+	const cellFrontInfected = new Cell(textures['cell-front-infected.png'], 'cell-front-infected')
 	cellFrontInfected.alpha = 0
-	
+
 	cellFrontContainer.addChild(cellFront, cellFrontInfected)
-	
-	const cellNucleus = new Cell(textures["cell-nucleus.png"], "cell")
-	// cellNucleus.x = x
-	// cellNucleus.y = y
-	
+
+	const cellNucleus = new Cell(textures['cell-nucleus.png'], 'cell')
+
 	cellNucleusContainer.addChild(cellNucleus)
 
 	if (connecting) {
-		const connectingCellBack = new Cell(textures["cell-back.png"], "connecting-cell")
+		const connectingCellBack = new Cell(textures['cell-back.png'], 'connecting-cell')
 
 		cellBackContainer.addChild(connectingCellBack)
-		
-		const connectingCellFront = new Cell(textures["cell-front.png"], "connecting-cell")
-		const connectingCellFrontInfected = new Cell(textures["cell-front-infected.png"], "connecting-cell-front-infected")
+
+		const connectingCellFront = new Cell(textures['cell-front.png'], 'connecting-cell')
+		const connectingCellFrontInfected = new Cell(textures['cell-front-infected.png'], 'connecting-cell-front-infected')
 		connectingCellFrontInfected.alpha = 0
 
 		cellFrontContainer.addChild(connectingCellFront, connectingCellFrontInfected)
 
-		const connectingCellNucleus = new Cell(textures["cell-nucleus.png"], "connecting-cell")
-		
+		const connectingCellNucleus = new Cell(textures['cell-nucleus.png'], 'connecting-cell')
+
 		cellNucleusContainer.addChild(connectingCellNucleus)
 	}
 
 	/*
-	** Displacement filter 
+	** Displacement filter
 	*/
+	/* eslint-disable new-cap */
 	const displacementSprite = new PIXI.Sprite.fromImage('img/water.png')
+	/* eslint-enable new-cap */
 	displacementSprite.texture.baseTexture.wrapMode = PIXI.WRAP_MODES.REPEAT
 
 	this.displacementFilter = new PIXI.filters.DisplacementFilter(displacementSprite)
@@ -101,19 +92,18 @@ const Container = function(target, orientation, name, textures, connecting = fal
 
 	/*
 	**	Add all the containers to the main container
-	**	and the displacementSprite, which isn't visible 
+	**	and the displacementSprite, which isn't visible
 	** 	but needs to be on the stage.
 	*/
 	this.addChild(
-			virusBackContainer,
-			cellBackContainer,
-			virusFrontContainer,
-			cellFrontContainer,
-			virusNucleusContainer,
-			cellNucleusContainer,
-			displacementSprite
-		)
-
+		virusBackContainer,
+		cellBackContainer,
+		virusFrontContainer,
+		cellFrontContainer,
+		virusNucleusContainer,
+		cellNucleusContainer,
+		displacementSprite
+	)
 }
 
 Container.prototype = Object.create(PIXI.Container.prototype)
