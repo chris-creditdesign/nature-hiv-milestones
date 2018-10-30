@@ -1,4 +1,4 @@
-#timeline-container {
+.timeline-container {
 	height: 100vh;
 	position: -webkit-sticky;
 	position: sticky;
@@ -54,7 +54,7 @@
 	}
 
 
-	.tooltip {
+	.timeline-container__tooltip {
 		position: absolute;
 		background: #000;
 		color: #fff;
@@ -67,7 +67,7 @@
 		transition: opacity 100ms linear;
 		pointer-events: none;
 
-		&.hidden {
+		&.timeline-container__tooltip--hidden {
 			opacity: 0;
 		}
 
@@ -94,9 +94,4 @@
 		
 	}
 
-}
-
-#timeline-container.scrollstoryInactive {
-	position: absolute;
-	top: 50px;
 }

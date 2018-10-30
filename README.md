@@ -24,6 +24,9 @@ To create minified, autoprefixed css and js files:
 
 ## To do:
 
+- Remove role="navigation" from main nav
+- Set aria-current="step" on svg timeline
+
 - Distortion filter area
 - Make animation on by default
 - Move ensighten script to top
@@ -63,3 +66,16 @@ To create minified, autoprefixed css and js files:
  *                      1 = totally flat).
  */
 
+```
+ 	@media screen and (min-width: $break-tiny) {
+
+	}
+
+	@media screen and (min-width: $break-small) {
+
+	}
+
+	@media screen and (min-width: $break-large) {
+		
+	}
+```

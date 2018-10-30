@@ -3,7 +3,7 @@ import * as PIXI from 'pixi.js'
 import updateCanvas from './updateCanvas'
 
 function resizeCanvas(app, counter) {
-	const height = document.getElementById('pixi-container').offsetHeight
+	const height = document.getElementById('js-pixi-container').offsetHeight
 
 	if ((window.innerWidth !== app.screen.width) || (height !== app.screen.height)) {
 		app.renderer.resize(

@@ -1,12 +1,24 @@
 @import "includes/fonts";
 @import "includes/variables";
 
-@import "sections/header";
-@import "sections/articles";
-@import "sections/video";
-@import "sections/podcast";
+@import "sections/header/header";
+@import "sections/header/header__banner";
+@import "sections/header/header__title";
+@import "sections/header/header__title__inner";
+@import "sections/header/header__nav";
+@import "sections/header/header__nav__list";
+@import "sections/header/header__nav__list__item";
+@import "sections/article-container/article-container";
+@import "sections/article-container/article--with-image";
+@import "sections/article-container/article--with-video";
+@import "sections/article-container/article--secondary";
+@import "sections/article-container/article--inner";
+@import "sections/article-container/article__header-flex-container.scss";
+@import "sections/article-container/article__image-flex-container.scss";
+@import "sections/article-container/article__text-flex-container.scss";
+// @import "sections/podcast";
 @import "sections/pixi";
-@import "sections/timeline";
+@import "sections/timeline-container";
 @import "sections/animation-control";
 @import "sections/footer";
 

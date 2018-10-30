@@ -1,0 +1,18 @@
+.header__title__inner {
+	background-color: $transparent-black;
+	padding: 10px;
+	width: 76%;
+
+	@media screen and (min-width: $break-tiny) {
+		padding: 15px;
+	}
+
+	@media screen and (min-width: $break-small) {
+		padding: 15px 15px 20px;
+		width: 60%;
+	}
+
+	@media screen and (min-width: $break-large) {
+		width: 40%;	
+	}
+}

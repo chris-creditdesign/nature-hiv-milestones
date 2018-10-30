@@ -13,12 +13,13 @@ import debounce from './helpers/debounce'
 const jsonURL = 'img/hiv-cells.json'
 
 let animationActive = true
-const checkbox = document.getElementById('animations')
+const checkbox = document.getElementById('js-animations')
 
-checkbox.addEventListener('change', () => {
+/* eslint-disable func-names */
+checkbox.addEventListener('change', function () {
 	animationActive = this.checked
 })
-
+/* eslint-enable func-names */
 
 const init = () => {
 	// Initiate the scrollama
@@ -26,8 +27,8 @@ const init = () => {
 	let timeline
 	let counter = 0
 
-	const container = document.querySelector('.stories')
-	const step = Array.from(container.querySelectorAll('.story'))
+	const container = document.querySelector('.js-stories')
+	const step = Array.from(container.querySelectorAll('.js-story'))
 
 	let data = step.map((elem, index) => ({
 		start: parseInt(elem.dataset.start, 10),
@@ -55,7 +56,7 @@ const init = () => {
 	data.decades = range(data.startYear, data.endYear, 10)
 
 	const timelineOptions = buildTimelineOptions({
-		target: '#timeline-container',
+		target: '#js-timeline-container',
 		data
 	})
 
@@ -76,7 +77,7 @@ const init = () => {
 
 	// Initiate the PIXI canvas
 	const app = loadCanvas(jsonURL)
-	document.getElementById('pixi-container').appendChild(app.view)
+	document.getElementById('js-pixi-container').appendChild(app.view)
 
 	// Setup the scroller instance and pass the callback function
 	scroller

@@ -4,7 +4,6 @@ import buildAxis from './buildAxis'
 import buildLine from './buildLine'
 import buildMilestones from './buildMilestones'
 import updateSvg from './updateSvg'
-import hideTooltip from './hideTooltip'
 
 function Timeline(options) {
 	return Object.assign(
@@ -14,7 +13,6 @@ function Timeline(options) {
 		buildAxis,
 		buildLine,
 		buildMilestones,
-		hideTooltip,
 		updateSvg,
 		options
 	)

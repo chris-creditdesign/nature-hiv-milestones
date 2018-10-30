@@ -1,0 +1,12 @@
+.header__nav__list {
+	list-style: none;
+	font-family: $sans-serif-font;
+	margin: 10px 0 0;
+	padding: 0;
+
+	@media screen and (min-width: $break-small) {
+		display: flex;
+		justify-content: space-around;
+		flex-wrap: nowrap;
+	}
+}

@@ -4,9 +4,9 @@ import onAssetsLoaded from './onAssetsLoaded'
 function loadCanvas(jsonURL) {
 	// Checking the height of the pixi-container accounts for the address and tab bar
 	// on ios which affects the screen height
-	const height = document.getElementById('pixi-container').offsetHeight === window.innerHeight
+	const height = document.getElementById('js-pixi-container').offsetHeight === window.innerHeight
 		? window.innerHeight
-		: document.getElementById('pixi-container').offsetHeight
+		: document.getElementById('js-pixi-container').offsetHeight
 
 	const app = new PIXI.Application(
 		window.innerWidth,

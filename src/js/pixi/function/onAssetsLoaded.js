@@ -12,14 +12,14 @@ function onAssetsLoaded(app, resources, jsonURl) {
 
 	const { textures } = resources[jsonURl]
 
-	const alphaContainerB = new AlphaContainer(width, height, textures, 5, 'cell-complete-alpha-2.png')
-	const alphaContainerC = new AlphaContainer(width, height, textures, 10, 'cell-complete-alpha-1.png')
+	const alphaContainerA = new AlphaContainer(width, height, textures, 5, 'cell-complete-alpha-2.png')
+	const alphaContainerB = new AlphaContainer(width, height, textures, 10, 'cell-complete-alpha-1.png')
 
-	const cellContainerA = new Container('#bg-container', 'left', 'cellContainerA', textures)
-	const cellContainerB = new Container('#bg-container', 'right', 'cellContainerB', textures, true)
+	const cellContainerA = new Container('#js-bg-container', 'left', 'cellContainerA', textures)
+	const cellContainerB = new Container('#js-bg-container', 'right', 'cellContainerB', textures, true)
 
-	app.stage.addChild(alphaContainerB,
-		alphaContainerC,
+	app.stage.addChild(alphaContainerA,
+		alphaContainerB,
 		cellContainerA,
 		cellContainerB)
 

@@ -1,4 +1,4 @@
-#pixi-container{
+.pixi-container{
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -13,12 +13,4 @@
 			#420039 100%
 	);
 
-	transition:opacity 500ms;
-
 }
-
-// Only apply the transition if JS is available
-#pixi-container.hidden {
-	opacity: 0;
-}
-
