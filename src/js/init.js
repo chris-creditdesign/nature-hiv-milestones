@@ -12,15 +12,6 @@ import debounce from './helpers/debounce'
 
 const jsonURL = 'img/hiv-cells.json'
 
-let animationActive = true
-const checkbox = document.getElementById('js-animations')
-
-/* eslint-disable func-names */
-checkbox.addEventListener('change', function () {
-	animationActive = this.checked
-})
-/* eslint-enable func-names */
-
 const init = () => {
 	// Initiate the scrollama
 	const scroller = scrollama()
@@ -97,9 +88,7 @@ const init = () => {
 			const thisStepProgress = section * progress
 			counter = stepsSoFar + thisStepProgress
 
-			if (animationActive) {
-				updateCanvas(app, counter)
-			}
+			updateCanvas(app, counter)
 		})
 		.onStepEnter(handleStepEnter)
 
