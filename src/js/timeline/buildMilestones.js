@@ -10,7 +10,7 @@ function addMilestones(selection, timeline, index = 0) {
 	  .append('a')
 	  	.attr('href', d => `#${d.id}`)
 	  	.attr('aria-label', d => `${d.start}${d.end ? `-${d.end}` : ''} ${d.name} ${d.title}`)
-		.attr('aria-current', (d, i) => (i === index ? 'current' : null))
+		.attr('aria-current', (d, i) => (i === index ? 'step' : null))
 	  	.attr('role', 'link')
 		.on('click', (d) => {
 			event.preventDefault()
