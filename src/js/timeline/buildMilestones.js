@@ -1,5 +1,19 @@
 /* eslint-disable no-mixed-spaces-and-tabs, no-param-reassign */
-import { event } from 'd3-selection'
+
+function showTooltip(d, timeline) {
+	document.getElementById('tooltip-title')
+		.innerText = d.title
+	document.getElementById('tooltip-tag')
+		.innerText = `${d.name} (${d.start}${d.end ? `-${d.end}` : ''})`
+
+	timeline.tooltip.style.top = `${timeline.timeScale(d.start) + timeline.margins.top - (timeline.tooltip.offsetHeight / 2)}px`
+
+	document.getElementById('tooltip').classList.remove('timeline-container__tooltip--hidden')
+}
+
+function hideTooltip() {
+	document.getElementById('tooltip').classList.add('timeline-container__tooltip--hidden')
+}
 
 function addMilestones(selection, timeline, index = 0) {
 	selection
@@ -9,14 +23,18 @@ function addMilestones(selection, timeline, index = 0) {
 		.enter()
 	  .append('a')
 	  	.attr('href', d => `#${d.id}`)
-	  	.attr('aria-label', d => `${d.start}${d.end ? `-${d.end}` : ''} ${d.name} ${d.title}`)
 		.attr('aria-current', (d, i) => (i === index ? 'step' : null))
-	  	.attr('role', 'link')
+		.attr('aria-labelledby', 'tooltip')
+		.attr('aria-label', d => `${d.start}${d.end ? `-${d.end}` : ''} ${d.name} ${d.title}`)
 		.on('click', (d) => {
-			event.preventDefault()
-			document.getElementById(d.id)
-				.scrollIntoView({ block: 'start', behavior: 'smooth' })
+			const article = document.getElementById(d.id)
+			article.querySelector('h2')
+				.focus()
 		})
+		.on('mouseenter', d => showTooltip(d, timeline))
+		.on('focus', d => showTooltip(d, timeline))
+		.on('mouseleave', () => hideTooltip())
+		.on('blur', () => hideTooltip())
 	  .append('circle')
 		.attr('cx', (d) => {
 			if (d.concurrentAtTime) {
@@ -26,22 +44,9 @@ function addMilestones(selection, timeline, index = 0) {
 		})
 		.attr('cy', d => timeline.timeScale(d.start))
 		.attr('r', timeline.width / 10)
-		.on('mouseenter', (d) => {
-			document.getElementById('tooltip-title')
-				.innerText = d.title
-			document.getElementById('tooltip-tag')
-				.innerText = `${d.name} (${d.start}${d.end ? `-${d.end}` : ''})`
-
-			timeline.tooltip.style.top = `${timeline.timeScale(d.start) + timeline.margins.top - (timeline.tooltip.offsetHeight / 2)}px`
-
-			document.getElementById('tooltip').classList.remove('timeline-container__tooltip--hidden')
-		})
-		.on('mouseleave', () => {
-			document.getElementById('tooltip').classList.add('timeline-container__tooltip--hidden')
-		})
 
 	selection
-		.attr('aria-current', (d, i) => (i === index ? 'milestone' : null))
+		.attr('aria-current', (d, i) => (i === index ? 'step' : null))
 }
 
 function buildMilestones(index) {
