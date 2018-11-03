@@ -1,5 +1,6 @@
 import 'intersection-observer'
 import scrollama from 'scrollama'
+import { event } from 'd3-selection'
 import { range } from 'd3-array'
 
 import Timeline from './timeline/Timeline'
@@ -15,6 +16,8 @@ const jsonURL = 'img/hiv-cells.json'
 const init = () => {
 	// Initiate the scrollama
 	const scroller = scrollama()
+	let app
+	let scrollerActive = false
 	let timeline
 	let counter = 0
 
@@ -46,6 +49,44 @@ const init = () => {
 	data.endYear = 2025
 	data.decades = range(data.startYear, data.endYear, 10)
 
+	function handleStepEnter(response) {
+		if (timeline) {
+			timeline.buildMilestones(response.index)
+		}
+	}
+
+	function handleScroll() {
+		if (!scrollerActive) {
+			scrollerActive = true
+			scroller.enable()
+		}
+		window.removeEventListener('scroll', handleScroll, true)
+	}
+
+	// Setup the scroller instance and pass the callback function
+	scroller
+		.setup({
+			step,
+			container,
+			offset: 0,
+			debug: false,
+			order: false,
+			progress: true,
+			threshold: 20
+		})
+		.onStepProgress((response) => {
+			const { index, progress } = response
+			const section = 1 / step.length
+			const stepsSoFar = index / step.length
+			const thisStepProgress = section * progress
+			counter = stepsSoFar + thisStepProgress
+
+			updateCanvas(app, counter)
+		})
+		.onStepEnter(handleStepEnter)
+
+	scrollerActive = true
+
 	const timelineOptions = buildTimelineOptions({
 		target: '#js-timeline-container',
 		data
@@ -58,39 +99,36 @@ const init = () => {
 			.buildLine()
 			.buildAxis()
 			.buildMilestones()
-	}
 
-	const handleStepEnter = (response) => {
-		if (timeline) {
-			timeline.buildMilestones(response.index)
-		}
+		timeline.milestoneContainer
+			.selectAll('a')
+			.on('click', (d, i) => {
+				event.preventDefault()
+
+				// Disable the scroller on anchor link scroll
+				// intersection Observer is not fast enough to keep up
+				scroller.disable()
+				scrollerActive = false
+
+				step[i].scrollIntoView()
+				step[i].querySelector('h2')
+					.focus()
+
+				timeline.buildMilestones(i)
+
+				// Once the page has updated re enable the scroller
+				// when the user scrolls again via handleScroll again
+				window.setTimeout(() => {
+					// Just to make sure the correct timeline is highlighted
+					timeline.buildMilestones(i)
+					window.addEventListener('scroll', handleScroll, true)
+				}, 500)
+			})
 	}
 
 	// Initiate the PIXI canvas
-	const app = loadCanvas(jsonURL)
+	app = loadCanvas(jsonURL)
 	document.getElementById('js-pixi-container').appendChild(app.view)
-
-	// Setup the scroller instance and pass the callback function
-	scroller
-		.setup({
-			step,
-			container,
-			offset: 0.5,
-			debug: false,
-			order: false,
-			progress: true,
-			threshold: 10
-		})
-		.onStepProgress((response) => {
-			const { index, progress } = response
-			const section = 1 / step.length
-			const stepsSoFar = index / step.length
-			const thisStepProgress = section * progress
-			counter = stepsSoFar + thisStepProgress
-
-			updateCanvas(app, counter)
-		})
-		.onStepEnter(handleStepEnter)
 
 	window.addEventListener('resize', debounce(
 		() => {

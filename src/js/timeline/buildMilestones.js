@@ -1,5 +1,4 @@
 /* eslint-disable no-mixed-spaces-and-tabs, no-param-reassign */
-
 function showTooltip(d, timeline) {
 	document.getElementById('tooltip-title')
 		.innerText = d.title
@@ -22,15 +21,12 @@ function addMilestones(selection, timeline, index = 0) {
 	selection
 		.enter()
 	  .append('a')
-	  	.attr('href', d => `#${d.id}`)
-		.attr('aria-current', (d, i) => (i === index ? 'step' : null))
+	  	.attr('class', 'milestone-link')
+	  	.attr('id', d => `${d.id}-link`)
+	  	.attr('xlink:xlink:href', d => `/#${d.id}`)
+		.attr('aria-current', null)
 		.attr('aria-labelledby', 'tooltip')
-		.attr('aria-label', d => `${d.start}${d.end ? `-${d.end}` : ''} ${d.name} ${d.title}`)
-		.on('click', (d) => {
-			const article = document.getElementById(d.id)
-			article.querySelector('h2')
-				.focus()
-		})
+		.attr('role', 'link')
 		.on('mouseenter', d => showTooltip(d, timeline))
 		.on('focus', d => showTooltip(d, timeline))
 		.on('mouseleave', () => hideTooltip())
@@ -51,7 +47,7 @@ function addMilestones(selection, timeline, index = 0) {
 
 function buildMilestones(index) {
 	this.milestoneContainer.selectAll('a')
-		.data(this.data, d => d.start)
+		.data(this.data, d => d.id)
 		.call(addMilestones, this, index)
 
 	return this

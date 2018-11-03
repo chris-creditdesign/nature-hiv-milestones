@@ -24,8 +24,9 @@ To create minified, autoprefixed css and js files:
 
 ## To do:
 
-- Remove role="navigation" from main nav
-- Set aria-current="step" on svg timeline
+- Check distortion filter on firefox
+- Don't build timeline if position sticky isn't available
+- Remove no js from header
 
 - Distortion filter area
 - Make animation on by default
