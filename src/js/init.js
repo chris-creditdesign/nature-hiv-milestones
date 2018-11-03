@@ -95,8 +95,10 @@ const init = () => {
 	// https://davidwalsh.name/css-supports
 	const supportsCSS = !!((window.CSS && window.CSS.supports) || window.supportsCSS || false)
 
-	if (supportsCSS) {
-		if (window.innerWidth >= 800 && CSS.supports('position', 'sticky')) {
+	const supportsSticky = CSS.supports('position', 'sticky') || CSS.supports('position', '-webkit-sticky')
+
+	if (supportsCSS && supportsSticky) {
+		if (window.innerWidth >= 800) {
 			timeline = Timeline(timelineOptions)
 				.buildSvg()
 				.buildScales()

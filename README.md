@@ -25,7 +25,6 @@ To create minified, autoprefixed css and js files:
 ## To do:
 
 - Check distortion filter on firefox
-- Don't build timeline if position sticky isn't available
 - Remove no js from header
 
 - Distortion filter area
