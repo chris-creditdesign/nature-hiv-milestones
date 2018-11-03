@@ -92,39 +92,45 @@ const init = () => {
 		data
 	})
 
-	if (window.innerWidth >= 800) {
-		timeline = Timeline(timelineOptions)
-			.buildSvg()
-			.buildScales()
-			.buildLine()
-			.buildAxis()
-			.buildMilestones()
+	// https://davidwalsh.name/css-supports
+	const supportsCSS = !!((window.CSS && window.CSS.supports) || window.supportsCSS || false)
 
-		timeline.milestoneContainer
-			.selectAll('a')
-			.on('click', (d, i) => {
-				event.preventDefault()
+	if (supportsCSS) {
+		if (window.innerWidth >= 800 && CSS.supports('position', 'sticky')) {
+			timeline = Timeline(timelineOptions)
+				.buildSvg()
+				.buildScales()
+				.buildLine()
+				.buildAxis()
+				.buildMilestones()
 
-				// Disable the scroller on anchor link scroll
-				// intersection Observer is not fast enough to keep up
-				scroller.disable()
-				scrollerActive = false
+			timeline.milestoneContainer
+				.selectAll('a')
+				.on('click', (d, i) => {
+					event.preventDefault()
 
-				step[i].scrollIntoView()
-				step[i].querySelector('h2')
-					.focus()
+					// Disable the scroller on anchor link scroll
+					// intersection Observer is not fast enough to keep up
+					scroller.disable()
+					scrollerActive = false
 
-				timeline.buildMilestones(i)
+					step[i].scrollIntoView()
+					step[i].querySelector('h2')
+						.focus()
 
-				// Once the page has updated re enable the scroller
-				// when the user scrolls again via handleScroll again
-				window.setTimeout(() => {
-					// Just to make sure the correct timeline is highlighted
 					timeline.buildMilestones(i)
-					window.addEventListener('scroll', handleScroll, true)
-				}, 500)
-			})
+
+					// Once the page has updated re enable the scroller
+					// when the user scrolls again via handleScroll again
+					window.setTimeout(() => {
+						// Just to make sure the correct timeline is highlighted
+						timeline.buildMilestones(i)
+						window.addEventListener('scroll', handleScroll, true)
+					}, 500)
+				})
+		}
 	}
+
 
 	// Initiate the PIXI canvas
 	app = loadCanvas(jsonURL)
