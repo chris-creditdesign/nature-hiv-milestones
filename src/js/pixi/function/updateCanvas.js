@@ -10,7 +10,7 @@ function updateCanvas(app, counter) {
 		const {
 			impactStart, impactEnd, connectionPoint, displacmentStart
 		} = container.backgroundPositions.progress
-		const displacmentFilterTotal = 50
+		const displacmentFilterTotal = 65
 
 		container.children.forEach((innerContainer) => {
 			innerContainer.children.filter(d => d.name === 'virus').forEach((cell, index) => {

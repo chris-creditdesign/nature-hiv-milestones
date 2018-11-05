@@ -24,7 +24,7 @@ To create minified, autoprefixed css and js files:
 
 ## To do:
 
-- Check distortion filter on firefox
+- Make sure distortion filter is uniform
 - Remove no js from header
 
 - Distortion filter area

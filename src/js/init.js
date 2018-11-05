@@ -68,7 +68,7 @@ const init = () => {
 		.setup({
 			step,
 			container,
-			offset: 0,
+			offset: 0.5,
 			debug: false,
 			order: false,
 			progress: true,

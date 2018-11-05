@@ -1,53 +1,62 @@
 .header__nav__list__item {
-	background-color: $light-text-color;
-	border-top: 1px solid #ffffff;
-	transition: background-color 100ms linear;
+	border-top: 1px solid #fff;
 
 	a {
-		padding: 10.5px 30.5px;
+		font-size: .77em;
+
 		display: inline-block;
+
 		width: 100%;
 		height: 100%;
-		font-size: 0.77em;
-		letter-spacing: 0.01em;
+		padding: 10.5px 30.5px;
+
+		transition: background-color 100ms linear;
+		letter-spacing: .01em;
+
+		background-color: $light-text-color;
+
+		&:hover,
+		&[aria-current] {
+			color: $text-color;
+			background-color: #fff;
+		}
 	}
 
 	&:first-child {
 		border-top: none;
 	}
 
-	&:hover, &[aria-current] {
-		background-color: #ffffff;
-
-		a {
-			color: $text-color;
-		}
-	}
 
 	@media screen and (min-width: $break-tiny) {
 		a {
-			font-size: 0.86em;
+			font-size: .86em;
 		}
 	}
 
 	@media screen and (min-width: $break-small) {
+		font-size: .9em;
+
 		display: inline-block;
+
 		margin: 0;
+
 		text-align: center;
-		flex-grow: 1;
-		font-size: 0.9em;
 
 		border-top: none;
-		border-right: 1px solid #ffffff;
-		transition: background-color 100ms linear;
-		background-color: $transparent-black;
+		border-right: 1px solid #fff;
+
+		flex-grow: 1;
 
 		&:last-child {
-			 border-right: none;
+			border-right: none;
 		}
 
 		a {
 			padding: 5px 10px;
+
+			transition: background-color 100ms linear;
+
+			background-color: $transparent-black;
 		}
 	}
 
