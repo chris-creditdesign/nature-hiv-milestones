@@ -63,6 +63,27 @@ const init = () => {
 		window.removeEventListener('scroll', handleScroll, true)
 	}
 
+	function handleClick(d, i) {
+		// Disable the scroller on anchor link scroll
+		// intersection Observer is not fast enough to keep up
+		scroller.disable()
+		scrollerActive = false
+
+		step[i].scrollIntoView()
+		step[i].querySelector('h2')
+			.focus()
+
+		timeline.buildMilestones(i)
+
+		// Once the page has updated re enable the scroller
+		// when the user scrolls again via handleScroll again
+		window.setTimeout(() => {
+			// Just to make sure the correct timeline is highlighted
+			timeline.buildMilestones(i)
+			window.addEventListener('scroll', handleScroll, true)
+		}, 500)
+	}
+
 	// Setup the scroller instance and pass the callback function
 	scroller
 		.setup({
@@ -110,25 +131,7 @@ const init = () => {
 				.selectAll('a')
 				.on('click', (d, i) => {
 					event.preventDefault()
-
-					// Disable the scroller on anchor link scroll
-					// intersection Observer is not fast enough to keep up
-					scroller.disable()
-					scrollerActive = false
-
-					step[i].scrollIntoView()
-					step[i].querySelector('h2')
-						.focus()
-
-					timeline.buildMilestones(i)
-
-					// Once the page has updated re enable the scroller
-					// when the user scrolls again via handleScroll again
-					window.setTimeout(() => {
-						// Just to make sure the correct timeline is highlighted
-						timeline.buildMilestones(i)
-						window.addEventListener('scroll', handleScroll, true)
-					}, 500)
+					handleClick(d, i)
 				})
 		}
 	}
