@@ -6,7 +6,7 @@ function buildSvg() {
 		.attr('width', this.totalWidth)
 		.attr('height', this.totalHeight)
 		.attr('roll', 'group')
-		.attr('aria-labelledby', 'timeline-title')
+		.attr('aria-label', 'Milestones timeline')
 		.attr('focusable', 'false')
 
 	this.svg
