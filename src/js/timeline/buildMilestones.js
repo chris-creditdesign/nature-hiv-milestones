@@ -27,7 +27,7 @@ function addMilestones(selection, timeline, index = 0) {
 	  	.attr('xlink:xlink:href', d => `/#${d.id}`)
 		.attr('aria-current', null)
 		.attr('aria-labelledby', 'tooltip')
-		.attr('role', 'img')
+		.attr('role', 'link')
 		.on('mouseenter', d => showTooltip(d, timeline))
 		.on('focus', d => showTooltip(d, timeline))
 		.on('mouseleave', () => hideTooltip())
