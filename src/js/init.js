@@ -22,10 +22,10 @@ const init = () => {
 	let counter = 0
 
 	const container = document.querySelector('.js-stories')
-	const step = Array.from(container.querySelectorAll('.js-story'))
+	const step = Array.from(container.querySelectorAll('.js-story')).filter(elem => elem.dataset.start)
 
 	let data = step.map((elem, index) => ({
-		start: parseInt(elem.dataset.start, 10),
+		start: elem.dataset.start ? parseInt(elem.dataset.start, 10) : null,
 		end: elem.dataset.end ? parseInt(elem.dataset.end, 10) : null,
 		concurrentAtTime: 0,
 		id: elem.getAttribute('id'),
@@ -33,6 +33,8 @@ const init = () => {
 		title: elem.querySelector('h2').innerText,
 		number: index + 1
 	}))
+
+	// .filter( elem => elem.start )
 
 	// Presuming there is a maximum two milestones on the same start date
 	// add a second/move left attribute to the second one
