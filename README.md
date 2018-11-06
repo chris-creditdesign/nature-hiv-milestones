@@ -24,6 +24,10 @@ To create minified, autoprefixed css and js files:
 
 ## To do:
 
+- Three dots
+- Leading video no date
+- Jerky on old pc?
+
 - Make sure distortion filter is uniform
 - Remove no js from header
 

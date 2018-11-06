@@ -6,6 +6,7 @@ function showTooltip(d, timeline) {
 		.innerText = `${d.name} (${d.start}${d.end ? `-${d.end}` : ''})`
 
 	timeline.tooltip.style.top = `${timeline.timeScale(d.start) + timeline.margins.top - (timeline.tooltip.offsetHeight / 2)}px`
+	timeline.tooltip.style.left = `${timeline.milestoneXPositon + (timeline.milestoneRadius * 2 * d.concurrentAtTime) + 30}px`
 
 	document.getElementById('tooltip').classList.remove('timeline-container__tooltip--hidden')
 }
@@ -32,14 +33,9 @@ function addMilestones(selection, timeline, index = 0) {
 		.on('mouseleave', () => hideTooltip())
 		.on('blur', () => hideTooltip())
 	  .append('circle')
-		.attr('cx', (d) => {
-			if (d.concurrentAtTime) {
-				return timeline.width * 0.75 + timeline.width / 5
-			}
-			return timeline.width * 0.75
-		})
+		.attr('cx', d => timeline.milestoneXPositon + (timeline.milestoneRadius * 2 * d.concurrentAtTime))
 		.attr('cy', d => timeline.timeScale(d.start))
-		.attr('r', timeline.width / 10)
+		.attr('r', timeline.milestoneRadius)
 
 	selection
 		.attr('aria-current', (d, i) => (i === index ? 'step' : null))

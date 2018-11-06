@@ -27,7 +27,7 @@ const init = () => {
 	let data = step.map((elem, index) => ({
 		start: parseInt(elem.dataset.start, 10),
 		end: elem.dataset.end ? parseInt(elem.dataset.end, 10) : null,
-		concurrentAtTime: false,
+		concurrentAtTime: 0,
 		id: elem.getAttribute('id'),
 		name: elem.getAttribute('id').split('-').map(s => s.charAt(0).toUpperCase() + s.slice(1)).join(' '),
 		title: elem.querySelector('h2').innerText,
@@ -39,8 +39,9 @@ const init = () => {
 	data = data.map((elem, index, arr) => {
 		const { start } = elem
 		const newElem = elem
-		if (arr.slice(0, index).filter(item => item.start === start).length) {
-			newElem.concurrentAtTime = true
+		const { length } = arr.slice(0, index).filter(item => item.start === start)
+		if (length) {
+			newElem.concurrentAtTime = length
 		}
 		return newElem
 	})
@@ -81,7 +82,7 @@ const init = () => {
 			// Just to make sure the correct timeline is highlighted
 			timeline.buildMilestones(i)
 			window.addEventListener('scroll', handleScroll, true)
-		}, 500)
+		}, 250)
 	}
 
 	// Setup the scroller instance and pass the callback function
@@ -135,7 +136,6 @@ const init = () => {
 				})
 		}
 	}
-
 
 	// Initiate the PIXI canvas
 	app = loadCanvas(jsonURL)
