@@ -64,7 +64,7 @@
 	"spriteSourceSize": {"x":0,"y":0,"w":50,"h":50},
 	"sourceSize": {"w":50,"h":50}
 },
-"virus-front.png":
+"virus-complete-alpha-1.png":
 {
 	"frame": {"x":50,"y":1750,"w":50,"h":50},
 	"rotated": false,
@@ -72,16 +72,33 @@
 	"spriteSourceSize": {"x":0,"y":0,"w":50,"h":50},
 	"sourceSize": {"w":50,"h":50}
 },
-"virus-nucleus.png":
+"virus-complete-alpha-2.png":
 {
 	"frame": {"x":100,"y":1750,"w":50,"h":50},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":50,"h":50},
 	"sourceSize": {"w":50,"h":50}
+},
+"virus-front.png":
+{
+	"frame": {"x":150,"y":1750,"w":50,"h":50},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":50,"h":50},
+	"sourceSize": {"w":50,"h":50}
+},
+"virus-nucleus.png":
+{
+	"frame": {"x":200,"y":1750,"w":50,"h":50},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":50,"h":50},
+	"sourceSize": {"w":50,"h":50}
 }},
 "animations": {
-	"cell-complete-alpha": ["cell-complete-alpha-1.png","cell-complete-alpha-2.png"]
+	"cell-complete-alpha": ["cell-complete-alpha-1.png","cell-complete-alpha-2.png"],
+	"virus-complete-alpha": ["virus-complete-alpha-1.png","virus-complete-alpha-2.png"]
 },
 "meta": {
 	"app": "https://www.codeandweb.com/texturepacker",
@@ -90,6 +107,6 @@
 	"format": "RGBA8888",
 	"size": {"w":250,"h":1800},
 	"scale": "1",
-	"smartupdate": "$TexturePacker:SmartUpdate:1e322b13d2a1542e71fb4781a1f07914:7017e620fd1876317fb54b31879c2896:f87d003e40e60934b23c97d96f744012$"
+	"smartupdate": "$TexturePacker:SmartUpdate:5dbdb74dc91d5e6cdd2bbcef909bc252:9ce583aafd808bbcd736520e1b5657e0:f87d003e40e60934b23c97d96f744012$"
 }
 }
