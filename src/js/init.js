@@ -122,7 +122,6 @@ const init = () => {
 	const supportsSticky = CSS.supports('position', 'sticky') || CSS.supports('position', '-webkit-sticky')
 
 	if (supportsCSS && supportsSticky) {
-		if (window.innerWidth >= 800) {
 			timeline = Timeline(timelineOptions)
 				.buildSvg()
 				.buildScales()
@@ -136,7 +135,6 @@ const init = () => {
 					event.preventDefault()
 					handleClick(d, i)
 				})
-		}
 	}
 
 	// Initiate the PIXI canvas
