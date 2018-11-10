@@ -6,6 +6,10 @@
 
 ## Build process. 
 
+To create source html file from react components and markdown/yaml data
+
+	node render_to_file.js
+
 To create css and js files and instruct webpack to watch all files for changes:
 
 	npm run dev
