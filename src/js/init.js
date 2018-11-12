@@ -119,9 +119,10 @@ const init = () => {
 	// https://davidwalsh.name/css-supports
 	const supportsCSS = !!((window.CSS && window.CSS.supports) || window.supportsCSS || false)
 
-	const supportsSticky = CSS.supports('position', 'sticky') || CSS.supports('position', '-webkit-sticky')
+	if (supportsCSS) {
+		const supportsSticky = CSS.supports('position', 'sticky') || CSS.supports('position', '-webkit-sticky')
 
-	if (supportsCSS && supportsSticky) {
+		if (supportsSticky) {
 			timeline = Timeline(timelineOptions)
 				.buildSvg()
 				.buildScales()
@@ -135,6 +136,7 @@ const init = () => {
 					event.preventDefault()
 					handleClick(d, i)
 				})
+		}
 	}
 
 	// Initiate the PIXI canvas

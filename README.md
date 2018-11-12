@@ -28,10 +28,9 @@ To create minified, autoprefixed css and js files:
 
 ## To do:
 
-- Three dots
-- Leading video no date
-- Jerky on old pc?
 
+- Build header links from data in React component
+- Jerky on old pc?
 - Update layer filter area on window resize
 - Weirdness with counter position or resize 
 - Right viroid comes in from the right
