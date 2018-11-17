@@ -3,9 +3,11 @@ const React = require('react')
 const Header = ({ navlist }) => {
 	const links = navlist.map( link => (
 			<li key={link.name}
-				className='header__nav__list__item'
-				aria-current={link.current ? 'page' : null}>
-				<a href={link.url}>{link.name}</a>
+				className='header__nav__list__item' >
+				<a href={link.url}
+					aria-current={link.current ? 'page' : null} >
+					{link.name}
+				</a>
 			</li>
 
 		))
