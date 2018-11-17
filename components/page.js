@@ -77,9 +77,23 @@ const Page = ({ articles, dataLayer, headerData, footerData, headData }) => {
 							</div>
 						</div>
 						
-						<ol>
+						<ol className='article-container__list'>
 							{renderedArticles}
 						</ol>
+
+						<aside className='advert'>
+							<a href='#'>
+								<figure className='advert__figure'>
+									<img
+										className='advert__image'
+										src='img/nature-hiv-pdf-download.jpg' 
+										alt='Download the Milestones in HIV pdf.' />
+									<figcaption
+										className='advert__caption'
+										>PDF of all milestones</figcaption>
+								</figure>
+							</a>
+						</aside>
 						
 					</section>
 

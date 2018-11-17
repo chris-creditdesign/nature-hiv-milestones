@@ -1,24 +1,28 @@
-@import "article";
-
 .article-container {
+	position: relative;
 
-    display: flex;
-    justify-content: space-between;
+
 
 	@media screen and (min-width: $break-small) {
+		display: flex;
+
 		padding-top: 50px;
+
+		justify-content: space-between;
+		flex-wrap: wrap;
 	}
 
-	background-image: linear-gradient($article-background-color, $article-background-color);
-	background-size: 10px 100%;
-	background-repeat: no-repeat;
-	background-position: 50% 50px;
-
-	ol, ul {
+	&__list {
 		width: 100%;
 		margin: 0;
 		padding: 0;
+
 		list-style: none;
+
+		background-image: linear-gradient($article-background-color, $article-background-color);
+		background-repeat: no-repeat;
+		background-position: 50% 50px;
+		background-size: 10px 100%;
 	}
 
 	li:last-child > .article {

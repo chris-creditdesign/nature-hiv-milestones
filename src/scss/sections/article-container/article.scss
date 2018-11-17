@@ -1,17 +1,19 @@
 .article {
-	padding: 20px;
-	background-color: $article-background-color;
-	box-shadow: 5px 5px 5px rgba(0,0,0,0.2);
-
 	width: 85%;
 	margin: 2em auto 2em;
+	padding: 20px;
+
+	background-color: $article-background-color;
+	box-shadow: 5px 5px 5px rgba(0,0,0,.2);
 
 	h2 {
 		font-size: 1.4rem;
+
 		margin: 0 0 1rem 0;
 
 		@media screen and (min-width: $break-tiny) {
 			font-size: 1.6rem;
+
 			margin: 0 0 1.6rem 0;
 		}
 
@@ -19,11 +21,12 @@
 			color: $text-color;
 		}
 	}
-	
+
 	a {
-		color: #069;
 		text-decoration: none;
-		
+
+		color: #069;
+
 		&:hover {
 			text-decoration: underline;
 		}
@@ -31,23 +34,30 @@
 
 	.article-type {
 		font-family: $sans-serif-font;
-		color: $light-text-color;
-		text-transform: uppercase;
+		font-size: .9rem;
 		font-weight: 700;
-		font-size: 0.9rem;
-		margin: 0 0 0.6rem 0;
+
 		position: relative;
+
+		margin: 0 0 .6rem 0;
 		margin-left: 15px;
 
+		text-transform: uppercase;
+
+		color: $light-text-color;
+
 		&:before {
-			content: "";
 			position: absolute;
+			top: .5em;
+			left: -15px;
+
 			width: 10px;
 			height: 10px;
-			background-color: $light-text-color;
-			top: 0.5em;
-			left: -15px;
+
+			content: '';
+
 			border-radius: 5px;
+			background-color: $light-text-color;
 		}
 	}
 
@@ -63,23 +73,33 @@
 
 .article__author-list {
 	font-family: $sans-serif-font;
-	text-transform: uppercase;
+	font-size: .8rem;
 	font-weight: 600;
-	font-size: 0.8rem;
 
+	width: 100%;
+	margin: 0;
+	padding: 0;
+
+	list-style: none;
+
+	text-transform: uppercase;
 }
 
 .article__author-list__item {
 	display: inline;
-	margin-right: 0.5em;
+
+	margin-right: .5em;
 }
 
 .article__credit {
 	font-family: $sans-serif-font;
-	color: $light-text-color;
+	font-size: .8rem;
 	font-style: italic;
-	font-size: 0.8rem;
 	line-height: 1rem;
-	margin: 0 0 0.6rem 0;
+
+	margin: 0 0 .6rem 0;
+
 	text-align: right;
+
+	color: $light-text-color;
 }

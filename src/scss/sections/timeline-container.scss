@@ -7,8 +7,6 @@
 	display: none;
 	z-index: 1000;
 
-	background: white;
-
 	@media screen and (min-width: $break-small) {
 		display: block;
 	}

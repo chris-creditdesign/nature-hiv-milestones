@@ -3,7 +3,7 @@ id: milestone-5
 articleType: image
 secondary: false
 inner: false
-start: 1972 
+start: 1975 
 end: 1982
 title: Milestone 5
 URL: /#
