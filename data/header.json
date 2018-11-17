@@ -1,0 +1,37 @@
+{
+	"navlist": [
+				{ 	"url": "#",
+					"name": "Milestone home",
+					"current": false },
+
+				{	"url": "#",
+					"name": "Milestones",
+					"current": false },
+
+				{	"url": "#",
+					"name": "Reviews",
+					"current": false },
+
+				{	"url": "#",
+					"name": "Research",
+					"current": false },
+				
+				{	"url":"#",
+					"name": "Milestones timeline",
+					"current": true
+				},
+
+				{	"url": "#",
+					"name": "Multimedia",
+					"current": false },
+
+				{	"url": "#",
+					"name": "Editorial credits",
+					"current": false },
+
+				{	"url": "#",
+					"name": "Sponsor",
+					"current": false }
+
+	]
+}

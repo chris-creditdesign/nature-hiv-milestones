@@ -5,7 +5,7 @@ const Article = require('./article.js')
 const Footer = require('./footer.js')
 const VideoArticle = require('./video-article.js')
 
-const Page = ({ articles, dataLayer, footerData, headData }) => {
+const Page = ({ articles, dataLayer, headerData, footerData, headData }) => {
 
 		const renderedArticles = articles.map( article => {
 			if ( article.main.data.articleType === 'image') {
@@ -65,7 +65,8 @@ const Page = ({ articles, dataLayer, footerData, headData }) => {
 					<div className='bg-container' id='js-bg-container' role='presentation' aria-hidden='true'></div>
 					<div className='pixi-container' id='js-pixi-container' role='presentation' aria-hidden='true'></div>
 
-					<Header />
+					<Header 
+						navlist={headerData.navlist} />
 					
 					<section className='article-container js-stories' role='main'>
 

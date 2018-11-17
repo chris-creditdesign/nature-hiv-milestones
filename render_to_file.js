@@ -13,12 +13,14 @@ const tidyOpts = {
 
 const dataLayer = require('./data/data-layer.json')
 const articles = require('./data/articles/index.js')
+const headerData = require('./data/header.json')
 const footerData = require('./data/footer.json')
 const headData = require('./data/head.json')
 
 const props = {
 	articles,
 	dataLayer,
+	headerData,
 	footerData,
 	headData
 }

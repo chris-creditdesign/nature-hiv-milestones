@@ -1,6 +1,15 @@
 const React = require('react')
 
-const Header = () => {
+const Header = ({ navlist }) => {
+	const links = navlist.map( link => (
+			<li key={link.name}
+				className='header__nav__list__item'
+				aria-current={link.current ? 'page' : null}>
+				<a href={link.url}>{link.name}</a>
+			</li>
+
+		))
+
 	return (
 		<header className='header'>
 			<div className='header__banner'>
@@ -61,38 +70,7 @@ const Header = () => {
 
 			<nav className='header__nav' aria-label='Main'>
 				<ul className='header__nav__list'>
-					<li className='header__nav__list__item'>
-						<a href='#'>Milestone home</a>
-					</li>
-
-					<li className='header__nav__list__item'>
-						<a href='#'>Milestones</a>
-					</li>
-
-					<li className='header__nav__list__item'>
-						<a href='#'>Reviews</a>
-					</li>
-
-					<li className='header__nav__list__item'>
-						<a href='#'>Research</a>
-					</li>
-					
-					<li className='header__nav__list__item'>
-						<a href='#' aria-current='page'>Milestones timeline</a>
-					</li>
-
-					<li className='header__nav__list__item'>
-						<a href='#'>Multimedia</a>
-					</li>
-
-					<li className='header__nav__list__item'>
-						<a href='#'>Editorial credits</a>
-					</li>
-
-					<li className='header__nav__list__item'>
-						<a href='#'>Sponsor</a>
-					</li>
-
+					{links}
 				</ul>
 			</nav>
 		</header>
