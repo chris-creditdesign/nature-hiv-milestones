@@ -33,7 +33,15 @@ module.exports = merge(common, {
 			use: {
 				loader: 'babel-loader',
 				options: {
-					presets: ["es2015"],
+					presets: [
+						[
+							"env", {
+								"targets": {
+									"browsers": ["last 2 versions"]
+								}
+							}
+						]
+					],
 					plugins: ["syntax-dynamic-import"]
 				}
 			}

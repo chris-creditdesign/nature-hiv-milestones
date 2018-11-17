@@ -28,7 +28,7 @@ To create minified, autoprefixed css and js files:
 
 ## To do:
 
-
+- Update to babel-preset-env
 - Build header links from data in React component
 - Jerky on old pc?
 - Update layer filter area on window resize
