@@ -8,8 +8,8 @@
 	
 	svg {
 		fill: #fff;
-		width: 91px;
-		height: 30px;
+		width: 165px;
+		height: 20px;
 		transition: fill 100ms linear;
 
 		&:hover {
@@ -20,9 +20,9 @@
 	@media screen and (min-width: $break-small) {
 		background-color: $transparent-white;
 
-		svg {
-			width: 151px;
-			height: 50px;
-		}
+		// svg {
+		// 	width: 151px;
+		// 	height: 50px;
+		// }
 	}
 }
