@@ -3,17 +3,15 @@ id: milestone-10
 articleType: image
 secondary: false
 inner: false
-start: 2001 
-end: 2014
+start: 1990
+end: ''
 title: Milestone 10
 URL: /#
-headline: Headline 10
+headline: Immune activation is prognostic of AIDS progression
 imgURL: img/placeholder-600x400.jpg
 imgCredit: Credit
 imgAlt: Image alt text
 authorList:
-    - Author 1
-    - Author 2
-    - Author 3
+    - Yvonne Bordon
 ---
-Milestone 10 dolor sit amet, consectetur adipisicing elit. Perspiciatis mollitia architecto pariatur, voluptates, aliquid quia tenetur, numquam cum dicta obcaecati quasi sunt facilis et molestias labore maxime id eos at. <a href="#">Read more</a>
+Chronic immune activation, rather than chronic infection per se, is associated with pathogenic HIV infection and progression to AIDS. <a href="#">Read more</a>

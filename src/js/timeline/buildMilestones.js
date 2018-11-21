@@ -1,11 +1,21 @@
 /* eslint-disable no-mixed-spaces-and-tabs, no-param-reassign */
 function showTooltip(d, timeline) {
-	document.getElementById('tooltip-title')
-		.innerText = d.title
-	document.getElementById('tooltip-tag')
-		.innerText = `${d.name} (${d.start}${d.end ? `-${d.end}` : ''})`
+	const { title, name, start, end, concurrentAtTime } = d
+	let tooltipTagText = ''
 
-	timeline.tooltip.style.top = `${timeline.timeScale(d.start) + timeline.margins.top - (timeline.tooltip.offsetHeight / 2)}px`
+	document.getElementById('tooltip-title')
+		.innerText = title
+
+	if ( d.name.includes('Milestone') ) {
+		tooltipTagText = `${name} (${start}${end ? `-${end}` : ''})`
+	} else {
+		tooltipTagText = `${start}${end ? `-${end}` : ''}`
+	}
+
+	document.getElementById('tooltip-tag')
+		.innerText = tooltipTagText
+
+	timeline.tooltip.style.top = `${timeline.timeScale(start) + timeline.margins.top - (timeline.tooltip.offsetHeight / 2)}px`
 	timeline.tooltip.style.left = `${timeline.milestoneXPositon + (timeline.milestoneRadius * 2 * d.concurrentAtTime) + 30}px`
 
 	document.getElementById('tooltip').classList.remove('timeline-container__tooltip--hidden')

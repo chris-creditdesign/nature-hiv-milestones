@@ -3,16 +3,15 @@ id: milestone-1
 articleType: image
 secondary: false
 inner: false
-start: 1916 
-end: 1937
+start: 1981 
+end: ''
 title: Milestone 1
 URL: /#
-headline: Headline 1
+headline: First report of AIDS cases
 imgURL: img/placeholder-600x400.jpg
 imgCredit: Credit
 imgAlt: Image alt text
 authorList:
-    - Author 1
-    - Author 2
+    - Shimona Starling
 ---
-Milestone 1 dolor sit amet, consectetur adipisicing elit. Perspiciatis mollitia architecto pariatur, voluptates, aliquid quia tenetur, numquam cum dicta obcaecati quasi sunt facilis et molestias labore maxime id eos at. <a href="#">Read more</a>
+In <em>Morbidity and Mortality Weekly Report</em>, a group of clinicians described five previously healthy men who had contracted pneumonia caused by an opportunistic pathogen normally associated with severe immunosuppression. The findings would soon be recognized as the first report of AIDS in humans.  <a href="#">Read more</a>

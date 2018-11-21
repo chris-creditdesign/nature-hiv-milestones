@@ -10,17 +10,12 @@ marked.setOptions({
 
 const articles = [
 	{
-		main: './data/articles/interview-1.md'
-	},
-	{
-		main: './data/articles/milestone-1.md'
-	},
-	{
-		main: './data/articles/milestone-2.md',
+		main: './data/articles/milestone-1.md',
 		secondary: './data/articles/video-1.md'
 	},
 	{
-		main: './data/articles/nobel-prize.md'
+		main: './data/articles/milestone-2.md',
+		secondary: './data/articles/video-2.md'
 	},
 	{
 		main: './data/articles/milestone-3.md'
@@ -32,7 +27,13 @@ const articles = [
 		main: './data/articles/milestone-5.md'
 	},
 	{
+		main: './data/articles/extra-1.md'
+	},
+	{
 		main: './data/articles/milestone-6.md'
+	},
+	{
+		main: './data/articles/extra-2.md'
 	},
 	{
 		main: './data/articles/milestone-7.md'
@@ -48,7 +49,13 @@ const articles = [
 		main: './data/articles/milestone-10.md'
 	},
 	{
+		main: './data/articles/extra-3.md'
+	},
+	{
 		main: './data/articles/milestone-11.md'
+	},
+	{
+		main: './data/articles/extra-4.md'
 	},
 	{
 		main: './data/articles/milestone-12.md'
@@ -58,6 +65,33 @@ const articles = [
 	},
 	{
 		main: './data/articles/milestone-14.md'
+	},
+	{
+		main: './data/articles/milestone-15.md'
+	},
+	{
+		main: './data/articles/milestone-16.md'
+	},
+	{
+		main: './data/articles/milestone-17.md'
+	},
+	{
+		main: './data/articles/extra-5.md'
+	},
+	{
+		main: './data/articles/milestone-18.md'
+	},
+	{
+		main: './data/articles/extra-6.md'
+	},
+	{
+		main: './data/articles/milestone-19.md'
+	},
+	{
+		main: './data/articles/milestone-20.md'
+	},
+	{
+		main: './data/articles/milestone-21.md'
 	}
 ]
 

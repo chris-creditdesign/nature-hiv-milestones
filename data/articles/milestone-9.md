@@ -3,17 +3,15 @@ id: milestone-9
 articleType: image
 secondary: false
 inner: false
-start: 2001
+start: 1990
 end: ''
 title: Milestone 9
 URL: /#
-headline: Headline 9
+headline: HIV-1 envelope vaccine protects chimpanzees from infection
 imgURL: img/placeholder-600x400.jpg
 imgCredit: Credit
 imgAlt: Image alt text
 authorList:
-    - Author 1
-    - Author 2
-    - Author 3
+    - João Duarte
 ---
-Milestone 9 dolor sit amet, consectetur adipisicing elit. Perspiciatis mollitia architecto pariatur, voluptates, aliquid quia tenetur, numquam cum dicta obcaecati quasi sunt facilis et molestias labore maxime id eos at. <a href="#">Read more</a>
+A study showing that gp120 envelope glycoprotein protects chimpanzees from HIV-1 infection paves the way for development of HIV-1 Env-targeted vaccines and antibodies. <a href="#">Read more</a>

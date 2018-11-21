@@ -3,17 +3,15 @@ id: milestone-12
 articleType: image
 secondary: false
 inner: false
-start: 2013
+start: 1994
 end: ''
 title: Milestone 12
 URL: /#
-headline: Headline 12
+headline: CD8<sup>+</sup> T cells control virus levels
 imgURL: img/placeholder-600x400.jpg
 imgCredit: Credit
 imgAlt: Image alt text
 authorList:
-    - Author 1
-    - Author 2
-    - Author 3
+    - Alison Farrell
 ---
-Milestone 12 dolor sit amet, consectetur adipisicing elit. Perspiciatis mollitia architecto pariatur, voluptates, aliquid quia tenetur, numquam cum dicta obcaecati quasi sunt facilis et molestias labore maxime id eos at. <a href="#">Read more</a>
+CD8<sup>+</sup> T cells mediate the drop in virus levels in blood after the acute phase of HIV or SIV infection, which can result in viral escape from this immune pressure.  <a href="#">Read more</a>

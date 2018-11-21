@@ -30,12 +30,20 @@ const Article = ({
 					data-end={end} >
 
 				<header className='article__header-flex-container'>
-					<p className='article-type'>{title} 
-						<span className='date'>{end ? `(${start}-${end})` :`(${start})`}</span>
-					</p>
+					{title.length 
+						? <p className='article-type'>{title} 
+							<span className='date'>{end ? ` (${start}-${end})` :` (${start})`}</span>
+						</p>
+						: <p className='article-type'> 
+							<span className='date'>{end ? `${start}-${end}` :` ${start}`}</span>
+						</p>
+
+					}
+
+
 					
 					<h2 tabIndex='-1'>
-						<a href={URL}>{headline}</a>					
+						<a href={URL} dangerouslySetInnerHTML={{__html: headline}}></a>					
 					</h2>
 				</header>
 
@@ -52,13 +60,16 @@ const Article = ({
 					<p dangerouslySetInnerHTML={{__html: content}}></p>
 					
 					<ul className='article__author-list'>
-						{authorList.map( (author) => 
-							<li 
-								key={author}
-								className='article__author-list__item'>
-									{author}
-							</li>
-						)}
+						{authorList ?
+							authorList.map( (author) => 
+								<li 
+									key={author}
+									className='article__author-list__item'>
+										{author}
+								</li>
+							)
+							: null
+						}
 					</ul>
 				</section>
 

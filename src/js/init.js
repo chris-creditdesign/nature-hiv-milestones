@@ -48,9 +48,9 @@ const init = () => {
 		return newElem
 	})
 
-	data.startYear = 1910
-	data.endYear = 2025
-	data.decades = range(data.startYear, data.endYear, 10)
+	data.startYear = 1980
+	data.endYear = 2020
+	data.decades = range(data.startYear, data.endYear, 5)
 
 	function handleStepEnter(response) {
 		if (timeline) {

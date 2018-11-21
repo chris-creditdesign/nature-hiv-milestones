@@ -3,17 +3,15 @@ id: milestone-2
 articleType: image
 secondary: false
 inner: false
-start: 1940 
-end: 1978
+start: 1983 
+end: ''
 title: Milestone 2
 URL: /#
-headline: Headline 2
+headline: Discovery of HIV-1
 imgURL: img/placeholder-600x400.jpg
 imgCredit: Credit
 imgAlt: Image alt text
 authorList:
-    - Author 1
-    - Author 2
-    - Author 3
+    - Sonja Schmid
 ---
-Milestone 2 dolor sit amet, consectetur adipisicing elit. Perspiciatis mollitia architecto pariatur, voluptates, aliquid quia tenetur, numquam cum dicta obcaecati quasi sunt facilis et molestias labore maxime id eos at. <a href="#">Read more</a>
+Three separate teams—in Paris, in Bethesda, Maryland, and in California—isolate retroviruses from the T cells of patients with AIDS or pre-AIDS. The retroviruses were cytopathic to T cells and eventually named HIV-1, the causative agent of AIDS. <a href="#">Read more</a>

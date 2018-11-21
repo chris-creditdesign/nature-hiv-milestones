@@ -7,6 +7,6 @@ inner: true
 start: '' 
 end: ''
 title: Video 1
-headline: Video 1
+headline: The global response to HIV
 ---
-Video 1 dolor sit amet, consectetur adipisicing elit. Perspiciatis mollitia architecto pariatur, voluptates, aliquid quia tenetur, numquam cum dicta obcaecati quasi sunt facilis et molestias labore maxime id eos at.
+Watch Anthony S. Fauci, head of the National Institute of Allergy and Infectious Diseases (NIAD) discuss the early stages of the AIDS pandemic, the clinical and scientific response, and prospects for the control and cure of HIV.

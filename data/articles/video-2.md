@@ -7,6 +7,6 @@ inner: true
 start: '' 
 end: ''
 title: Video 2
-headline: Video 2
+headline: Discovering HIV
 ---
-Video 2 dolor sit amet, consectetur adipisicing elit. Perspiciatis mollitia architecto pariatur, voluptates, aliquid quia tenetur, numquam cum dicta obcaecati quasi sunt facilis et molestias labore maxime id eos at.
+Watch Nobel Laureate and a co-discoverer of HIV Francoise Barré-Sinoussi, recall early studies leading to the identification of the causative agent of AIDS.

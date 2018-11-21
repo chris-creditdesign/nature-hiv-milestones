@@ -3,17 +3,15 @@ id: milestone-14
 articleType: image
 secondary: false
 inner: false
-start: 2017 
+start: 1995 
 end: ''
 title: Milestone 14
 URL: /#
-headline: Headline 14
+headline: 'First HIV protease inhibitor approved: key to combination antiretroviral therapy'
 imgURL: img/placeholder-600x400.jpg
 imgCredit: Credit
 imgAlt: Image alt text
 authorList:
-    - Author 1
-    - Author 2
-    - Author 3
+    - Megan Cully
 ---
-Milestone 14 dolor sit amet, consectetur adipisicing elit. Perspiciatis mollitia architecto pariatur, voluptates, aliquid quia tenetur, numquam cum dicta obcaecati quasi sunt facilis et molestias labore maxime id eos at. <a href="#">Read more</a>
+The development of HIV-1 protease inhibitors, which block the maturation of viral proteins, proved critical to the successful development of efficacious combination antiretroviral therapy. <a href="#">Read more</a>
