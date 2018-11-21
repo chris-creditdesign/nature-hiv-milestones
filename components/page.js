@@ -82,7 +82,7 @@ const Page = ({ articles, dataLayer, headerData, footerData, headData }) => {
 						</ol>
 
 						<aside className='advert'>
-							<a href='#'>
+							<a href='pdf/milestones-in-hiv.pdf'>
 								<figure className='advert__figure'>
 									<img
 										className='advert__image'

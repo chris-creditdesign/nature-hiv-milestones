@@ -25,6 +25,10 @@ const config = {
 			{
 				from: "./src/audio/",
 				to: "./audio/"
+			},
+			{
+				from: "./src/pdf/",
+				to: "./pdf/"
 			}
 		])
 	]
