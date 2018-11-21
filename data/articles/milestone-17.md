@@ -8,9 +8,9 @@ end: ''
 title: Milestone 17
 URL: /#
 headline: Identification of host-encoded HIV restriction factors
-imgURL: img/placeholder-600x400.jpg
-imgCredit: Credit
-imgAlt: Image alt text
+imgURL: img/hiv-m17.jpg
+imgCredit: L.Crow/Springer Nature Limited
+imgAlt: An ancient Greek warrior
 authorList:
     - Ashley York
 ---

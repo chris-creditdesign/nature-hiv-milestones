@@ -8,9 +8,9 @@ end: ''
 title: Milestone 15
 URL: /#
 headline: Identification of CCR5 and CXCR4 as HIV-1 co-receptors
-imgURL: img/placeholder-600x400.jpg
-imgCredit: Credit
-imgAlt: Image alt text
+imgURL: img/hiv-m15.jpg
+imgCredit: Getty Images/moodboard RF Thinkstock Images
+imgAlt: A key and a keyhole 
 authorList:
     - Kirsty Minton
 ---

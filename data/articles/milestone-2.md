@@ -8,9 +8,9 @@ end: ''
 title: Milestone 2
 URL: /#
 headline: Discovery of HIV-1
-imgURL: img/placeholder-600x400.jpg
-imgCredit: Credit
-imgAlt: Image alt text
+imgURL: img/hiv-m02.jpg
+imgCredit: Stocktrek Images, Inc./Alamy Stock Photo
+imgAlt: Scanning electron micrograph of HIV particles infecting a human T cell
 authorList:
     - Sonja Schmid
 ---

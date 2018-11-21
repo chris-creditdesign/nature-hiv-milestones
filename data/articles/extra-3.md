@@ -8,9 +8,9 @@ end: ''
 title: ''
 URL: /#
 headline: In-host variation of SIV leads to evasion of antibodies
-imgURL: img/placeholder-600x400.jpg
+imgURL: img/hiv-s3.jpg
 imgCredit: Credit
-imgAlt: Image alt text
+imgAlt: Virus being attacked by antibodies
 ---
 Extensive sequence variation is observed in SIV gp120 following experimental infection of macaque hosts. The corresponding mutations are later shown to be driven by selective pressure from the host immune response and lead to production of neutralizing antibody escape variants. Subsequent studies document a similar phenomenon in HIV-1.
 <h3>FURTHER READING</h3>

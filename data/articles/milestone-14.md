@@ -8,9 +8,9 @@ end: ''
 title: Milestone 14
 URL: /#
 headline: 'First HIV protease inhibitor approved: key to combination antiretroviral therapy'
-imgURL: img/placeholder-600x400.jpg
-imgCredit: Credit
-imgAlt: Image alt text
+imgURL: img/hiv-m14.jpg
+imgCredit: PhotoDisc/GettyImages
+imgAlt: Pills in a pill box
 authorList:
     - Megan Cully
 ---

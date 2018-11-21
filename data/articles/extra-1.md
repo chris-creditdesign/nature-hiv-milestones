@@ -8,9 +8,9 @@ end: ''
 title: ''
 URL: /#
 headline: Clinical test to detect AIDS virus
-imgURL: img/placeholder-600x400.jpg
+imgURL: img/hiv-s1.jpg
 imgCredit: Credit
-imgAlt: Image alt text
+imgAlt: A vial of blood
 ---
 The FDA approves the first blood-based immunoassay for detection of the AIDS virus. 
 <h3>FURTHER READING</h3>

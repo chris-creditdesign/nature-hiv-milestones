@@ -8,9 +8,9 @@ end: ''
 title: Milestone 10
 URL: /#
 headline: Immune activation is prognostic of AIDS progression
-imgURL: img/placeholder-600x400.jpg
-imgCredit: Credit
-imgAlt: Image alt text
+imgURL: img/hiv-m10.jpg
+imgCredit: Science Photo Library/Alamy Stock Photo
+imgAlt: B- and T-lymphocytes. Immune cells on colorful background
 authorList:
     - Yvonne Bordon
 ---

@@ -8,9 +8,9 @@ end: ''
 title: Milestone 11
 URL: /#
 headline: HIV-1 replicates at all stages of infection
-imgURL: img/placeholder-600x400.jpg
-imgCredit: Credit
-imgAlt: Image alt text
+imgURL: img/hiv-m11.jpg
+imgCredit: Science Photo Library/Alamy Stock Photo
+imgAlt: Close up of an HIV virus
 authorList:
     - Lucy Bird
 ---

@@ -8,9 +8,9 @@ end: ''
 title: Milestone 18
 URL: /#
 headline: The Berlin patient
-imgURL: img/placeholder-600x400.jpg
-imgCredit: Credit
-imgAlt: Image alt text
+imgURL: img/hiv-m18.jpg
+imgCredit: Getty Images
+imgAlt: A photo of Timothy Brown
 authorList:
     - Javier Martinez-Vesga
 ---

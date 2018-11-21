@@ -8,9 +8,9 @@ end: ''
 title: Milestone 20
 URL: /#
 headline: Antiretroviral treatment as prevention
-imgURL: img/placeholder-600x400.jpg
-imgCredit: Credit
-imgAlt: Image alt text
+imgURL: img/hiv-m20.jpg
+imgCredit: Zoonar GmbH/ALamy Stock Photo
+imgAlt: A blue PrEP pill
 authorList:
     - Gavin Mason
 ---

@@ -8,9 +8,9 @@ end: ''
 title: Milestone 3
 URL: /#
 headline: CD4 is the receptor for HIV-1
-imgURL: img/placeholder-600x400.jpg
-imgCredit: Credit
-imgAlt: Image alt text
+imgURL: img/hiv-m03.jpg
+imgCredit: Location South/Alamy Stock Photo
+imgAlt: 3D Illustration of a HIV Virus in the Body
 authorList:
     - Tanya Bondar
 ---

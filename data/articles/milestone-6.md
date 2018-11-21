@@ -8,9 +8,9 @@ end: ''
 title: Milestone 6
 URL: /#
 headline: Discovery of HIV-1-related viruses in nonhuman primates
-imgURL: img/placeholder-600x400.jpg
-imgCredit: Credit
-imgAlt: Image alt text
+imgURL: img/hiv-m06.jpg
+imgCredit: Nature Picture Library / Alamy Stock Photo
+imgAlt: Close up of a Barbary macaque
 authorList:
     - Alison Farrell
 ---

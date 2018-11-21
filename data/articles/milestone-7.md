@@ -8,9 +8,9 @@ end: ''
 title: Milestone 7
 URL: /#
 headline: Origins of HIV
-imgURL: img/placeholder-600x400.jpg
-imgCredit: Credit
-imgAlt: Image alt text
+imgURL: img/hiv-m07.jpg
+imgCredit: Getty Images
+imgAlt: An old-growth forest
 authorList:
     - Zoltan Fehervari
 ---

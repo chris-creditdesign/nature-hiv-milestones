@@ -8,9 +8,9 @@ end: ''
 title: Milestone 21
 URL: /#
 headline: START trial shows benefit of early antiretroviral treatment
-imgURL: img/placeholder-600x400.jpg
-imgCredit: Credit
-imgAlt: Image alt text
+imgURL: img/hiv-m21.jpg
+imgCredit: sondem/Alamy Stock Phot
+imgAlt: An open road
 authorList:
     - Louise Stone
 ---

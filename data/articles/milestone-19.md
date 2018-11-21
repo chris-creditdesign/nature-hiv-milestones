@@ -8,9 +8,9 @@ end: ''
 title: Milestone 19
 URL: /#
 headline: Advancing broadly neutralizing antibodies
-imgURL: img/placeholder-600x400.jpg
-imgCredit: Credit
-imgAlt: Image alt text
+imgURL: img/hiv-m19.jpg
+imgCredit: Science Photo Library/Alamy Stock Photo
+imgAlt: Antibodies
 authorList:
     - Alex Flemming
 ---

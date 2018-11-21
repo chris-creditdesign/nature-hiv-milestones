@@ -8,9 +8,9 @@ end: ''
 title: Milestone 16
 URL: /#
 headline: Latent integrated HIV-1 forms a stable, inducible viral reservoir
-imgURL: img/placeholder-600x400.jpg
-imgCredit: Credit
-imgAlt: Image alt text
+imgURL: img/hiv-m16.jpg
+imgCredit: Everett Collection Inc/Alamy Stock Photo
+imgAlt: Two ninjas
 authorList:
     - Clare Thomas
 ---

@@ -8,9 +8,9 @@ end: ''
 title: Milestone 8
 URL: /#
 headline: Structure of HIV-1 protease
-imgURL: img/placeholder-600x400.jpg
-imgCredit: Credit
-imgAlt: Image alt text
+imgURL: img/hiv-m08.jpg
+imgCredit: MedicalRF.com/Alamy Stock Photo
+imgAlt: Close up of HIV virus
 authorList:
     - Clare Thomas
 ---

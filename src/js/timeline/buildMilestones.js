@@ -16,7 +16,7 @@ function showTooltip(d, timeline) {
 		.innerText = tooltipTagText
 
 	timeline.tooltip.style.top = `${timeline.timeScale(start) + timeline.margins.top - (timeline.tooltip.offsetHeight / 2)}px`
-	timeline.tooltip.style.left = `${timeline.milestoneXPositon + (timeline.milestoneRadius * 2 * d.concurrentAtTime) + 30}px`
+	timeline.tooltip.style.left = `${timeline.milestoneXPositon + (timeline.milestoneRadius * 2 * concurrentAtTime) + 30}px`
 
 	document.getElementById('tooltip').classList.remove('timeline-container__tooltip--hidden')
 }

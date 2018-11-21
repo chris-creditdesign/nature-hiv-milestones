@@ -8,9 +8,9 @@ end: ''
 title: ''
 URL: /#
 headline: First antiretroviral drug approved
-imgURL: img/placeholder-600x400.jpg
+imgURL: img/hiv-s2.jpg
 imgCredit: Credit
-imgAlt: Image alt text
+imgAlt: A chemical structure
 ---
 The National Cancer Institute (US) in collaboration with what is now GlaxoSmithKline develops the first antiretroviral drug, zidovudine (AZT), followed by its rapid approval by the FDA. 
 <h3>FURTHER READING</h3>

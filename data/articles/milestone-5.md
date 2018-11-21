@@ -8,9 +8,9 @@ end: ''
 title: Milestone 5
 URL: /#
 headline: Complete HIV-1 sequence is described
-imgURL: img/placeholder-600x400.jpg
-imgCredit: Credit
-imgAlt: Image alt text
+imgURL: img/hiv-m05.jpg
+imgCredit: Stocktrek Images, Inc./Alamy Stock Photo
+imgAlt: Microscopic view of hiv virus
 authorList:
     - Andrea Du Toit
 ---

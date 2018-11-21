@@ -8,9 +8,9 @@ end: ''
 title: Milestone 9
 URL: /#
 headline: HIV-1 envelope vaccine protects chimpanzees from infection
-imgURL: img/placeholder-600x400.jpg
-imgCredit: Credit
-imgAlt: Image alt text
+imgURL: img/hiv-m09.jpg
+imgCredit: Getty Images/iStockphoto /Thinkstock
+imgAlt: Syringe above the words HIV and AIDS
 authorList:
     - João Duarte
 ---

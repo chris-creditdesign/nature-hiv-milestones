@@ -8,9 +8,9 @@ end: ''
 title: Milestone 1
 URL: /#
 headline: First report of AIDS cases
-imgURL: img/placeholder-600x400.jpg
-imgCredit: Credit
-imgAlt: Image alt text
+imgURL: img/hiv-m01.jpg
+imgCredit: Evgeny Gromov/Alamy Stock Photo
+imgAlt: HIV virus tag cloud 
 authorList:
     - Shimona Starling
 ---

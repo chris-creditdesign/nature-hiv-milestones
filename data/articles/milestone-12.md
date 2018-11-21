@@ -8,9 +8,9 @@ end: ''
 title: Milestone 12
 URL: /#
 headline: CD8<sup>+</sup> T cells control virus levels
-imgURL: img/placeholder-600x400.jpg
-imgCredit: Credit
-imgAlt: Image alt text
+imgURL: img/hiv-m12.jpg
+imgCredit: © David Scharf/Science Faction/Corbis
+imgAlt: Close up of a T cell
 authorList:
     - Alison Farrell
 ---
