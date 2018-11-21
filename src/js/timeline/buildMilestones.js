@@ -34,7 +34,7 @@ function addMilestones(selection, timeline, index = 0) {
 	  .append('a')
 	  	.attr('class', 'milestone-link')
 	  	.attr('id', d => `${d.id}-link`)
-	  	.attr('xlink:xlink:href', d => `/#${d.id}`)
+	  	.attr('xlink:xlink:href', d => `#${d.id}`)
 		.attr('aria-current', null)
 		.attr('aria-labelledby', 'tooltip')
 		.attr('role', 'link')

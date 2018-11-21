@@ -39,8 +39,7 @@ const articles = [
 		main: './data/articles/milestone-7.md'
 	},
 	{
-		main: './data/articles/milestone-8.md',
-		secondary: './data/articles/video-2.md'
+		main: './data/articles/milestone-8.md'
 	},
 	{
 		main: './data/articles/milestone-9.md'
