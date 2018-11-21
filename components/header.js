@@ -30,8 +30,8 @@ const Header = ({ navlist }) => {
 
 			<div className='header__title'>
 				<div className='header__title__inner'>
-					<p>Milestone | <time dateTime='2018-12-1'>1 December 2018</time></p>
-					<h1>HIV</h1>
+					<p>Milestone | <time dateTime='2018-11-30'>30 November 2018</time></p>
+					<h1>HIV research</h1>
 				</div>
 			</div>
 

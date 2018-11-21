@@ -1,37 +1,44 @@
 {
 	"navlist": [
-				{ 	"url": "#",
-					"name": "Milestone home",
-					"current": false },
-
-				{	"url": "#",
-					"name": "Milestones",
-					"current": false },
-
-				{	"url": "#",
-					"name": "Reviews",
-					"current": false },
-
-				{	"url": "#",
-					"name": "Research",
-					"current": false },
-				
-				{	"url":"#",
-					"name": "Milestones timeline",
-					"current": true
-				},
-
-				{	"url": "#",
-					"name": "Multimedia",
-					"current": false },
-
-				{	"url": "#",
-					"name": "Editorial credits",
-					"current": false },
-
-				{	"url": "#",
-					"name": "Sponsor",
-					"current": false }
-
+		{
+			"url": "https://www.nature.com/collections/mghkkdjlgx",
+			"name": "Milestone home",
+			"current": false
+		},
+		{
+			"url": "https://www.nature.com/collections/mghkkdjlgx/content/milestones",
+			"name": "Milestones",
+			"current": false
+		},
+		{
+			"url": "https://www.nature.com/collections/mghkkdjlgx/content/research",
+			"name": "Research",
+			"current": false
+		},
+		{
+			"url": "https://www.nature.com/collections/mghkkdjlgx/content/reviews",
+			"name": "Reviews",
+			"current": false
+		},
+		{
+			"url": "https://www.nature.com/collections/mghkkdjlgx/timeline",
+			"name": "Milestones timeline",
+			"current": true
+		},
+		{
+			"url": "https://www.nature.com/collections/mghkkdjlgx/multimedia",
+			"name": "Multimedia",
+			"current": false
+		},
+		{
+			"url": "https://www.nature.com/collections/mghkkdjlgx/editorialcredits",
+			"name": "Editorial credits",
+			"current": false
+		},
+		{
+			"url": "https://www.nature.com/collections/mghkkdjlgx/sponsors",
+			"name": "Sponsors",
+			"current": false
+		}
 	]
 }

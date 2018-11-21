@@ -31,7 +31,7 @@ const Footer = ({ blurb }) => {
 				</li>
 			</ul>
 
-			<small>© 2018 Macmillan Publishers Limited, part of Springer Nature. All rights reserved.</small>
+			<small>© 2018 Springer Nature Limited. All rights reserved.</small>
 		</footer>
 		)
 }
