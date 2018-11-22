@@ -9,7 +9,7 @@ title: Milestone 4
 URL: '#'
 headline: AIDS is a pandemic disease
 imgURL: img/hiv-m04.jpg
-imgCredit: Image Source
+imgCredit: PhotoDisc/Getty Images
 imgAlt: People wearing ribbons for World AIDS Day
 authorList:
     - Ursula Hofer

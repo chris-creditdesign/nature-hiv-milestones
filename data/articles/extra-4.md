@@ -6,10 +6,10 @@ inner: false
 start: 1991 
 end: ''
 title: ''
-URL: '#'
+URL: ''
 headline: In-host variation of SIV leads to evasion of antibodies
 imgURL: img/hiv-s4.jpg
-imgCredit: Credit
+imgCredit: Photodisc
 imgAlt: A human foetus 
 ---
 Treatment of pregnant mothers at 14–34 weeks gestation and infants for six weeks postpartum with the antiretroviral drug zidovudine significantly reduces maternal–infant transmission of HIV-1.

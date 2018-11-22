@@ -9,7 +9,7 @@ title: Milestone 13
 URL: '#'
 headline: HIV-1 dynamics drive CD4<sup>+</sup> T cell turnover
 imgURL: img/hiv-m13.jpg
-imgCredit: Incamerastock/Alamy Stock Photo
+imgCredit: incamerastock/Alamy Stock Photo
 imgAlt: Water draining down a plughole
 authorList:
     - Jessica McHugh
