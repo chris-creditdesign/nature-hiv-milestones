@@ -3,7 +3,7 @@ id: milestone-6
 articleType: image
 secondary: false
 inner: false
-start: 1983 
+start: 1986 
 end: ''
 title: Milestone 6
 URL: '#'

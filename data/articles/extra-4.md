@@ -3,11 +3,11 @@ id: extra-4
 articleType: image
 secondary: false
 inner: false
-start: 1991 
+start: 1994 
 end: ''
 title: ''
 URL: ''
-headline: In-host variation of SIV leads to evasion of antibodies
+headline: Antiretroviral treatment reduces maternal–infant transmission of HIV-1
 imgURL: img/hiv-s4.jpg
 imgCredit: Photodisc
 imgAlt: A human foetus 

@@ -7,7 +7,7 @@ start: 1985
 end: ''
 title: ''
 URL: ''
-headline: Clinical test to detect AIDS virus
+headline: Clinical test to detect HIV-1
 imgURL: img/hiv-s1.jpg
 imgCredit: Getty Images/Cultura RF
 imgAlt: A vial of blood
