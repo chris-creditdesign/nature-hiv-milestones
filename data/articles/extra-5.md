@@ -6,7 +6,7 @@ inner: false
 start: 2008 
 end: ''
 title: ''
-URL: /#
+URL: '#'
 headline: Nobel Prize for the discovery of HIV
 imgURL: img/hiv-nobel.jpg
 imgCredit: Credit

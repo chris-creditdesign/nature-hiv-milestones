@@ -6,7 +6,7 @@ inner: false
 start: 1990
 end: ''
 title: Milestone 10
-URL: /#
+URL: '#'
 headline: Immune activation is prognostic of AIDS progression
 imgURL: img/hiv-m10.jpg
 imgCredit: Science Photo Library/Alamy Stock Photo

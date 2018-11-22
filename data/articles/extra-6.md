@@ -6,7 +6,7 @@ inner: false
 start: 2009 
 end: ''
 title: ''
-URL: /#
+URL: '#'
 headline: Vaccination against HIV-1 may reduce risk of infection
 imgURL: img/hiv-s5.jpg
 imgCredit: Credit

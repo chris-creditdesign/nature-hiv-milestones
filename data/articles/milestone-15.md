@@ -6,7 +6,7 @@ inner: false
 start: 1996 
 end: ''
 title: Milestone 15
-URL: /#
+URL: '#'
 headline: Identification of CCR5 and CXCR4 as HIV-1 co-receptors
 imgURL: img/hiv-m15.jpg
 imgCredit: Getty Images/moodboard RF Thinkstock Images

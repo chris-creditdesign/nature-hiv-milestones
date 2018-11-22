@@ -6,7 +6,7 @@ inner: false
 start: 1984 
 end: ''
 title: Milestone 4
-URL: /#
+URL: '#'
 headline: AIDS is a pandemic disease
 imgURL: img/hiv-m04.jpg
 imgCredit: Image Source

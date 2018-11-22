@@ -6,7 +6,7 @@ inner: false
 start: 2009 
 end: ''
 title: Milestone 18
-URL: /#
+URL: '#'
 headline: The Berlin patient
 imgURL: img/hiv-m18.jpg
 imgCredit: Getty Images

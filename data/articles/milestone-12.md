@@ -6,7 +6,7 @@ inner: false
 start: 1994
 end: ''
 title: Milestone 12
-URL: /#
+URL: '#'
 headline: CD8<sup>+</sup> T cells control virus levels
 imgURL: img/hiv-m12.jpg
 imgCredit: © David Scharf/Science Faction/Corbis

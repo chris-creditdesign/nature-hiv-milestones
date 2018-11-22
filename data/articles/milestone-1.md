@@ -6,7 +6,7 @@ inner: false
 start: 1981 
 end: ''
 title: Milestone 1
-URL: /#
+URL: '#'
 headline: First report of AIDS cases
 imgURL: img/hiv-m01.jpg
 imgCredit: Evgeny Gromov/Alamy Stock Photo

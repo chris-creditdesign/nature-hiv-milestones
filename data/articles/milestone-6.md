@@ -6,7 +6,7 @@ inner: false
 start: 1983 
 end: ''
 title: Milestone 6
-URL: /#
+URL: '#'
 headline: Discovery of HIV-1-related viruses in nonhuman primates
 imgURL: img/hiv-m06.jpg
 imgCredit: Nature Picture Library / Alamy Stock Photo

@@ -6,7 +6,7 @@ inner: false
 start: 1987 
 end: ''
 title: ''
-URL: /#
+URL: '#'
 headline: First antiretroviral drug approved
 imgURL: img/hiv-s2.jpg
 imgCredit: Credit

@@ -6,7 +6,7 @@ inner: false
 start: 1995 
 end: ''
 title: Milestone 14
-URL: /#
+URL: '#'
 headline: 'First HIV protease inhibitor approved: key to combination antiretroviral therapy'
 imgURL: img/hiv-m14.jpg
 imgCredit: PhotoDisc/GettyImages

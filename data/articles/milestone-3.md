@@ -6,7 +6,7 @@ inner: false
 start: 1984
 end: ''
 title: Milestone 3
-URL: /#
+URL: '#'
 headline: CD4 is the receptor for HIV-1
 imgURL: img/hiv-m03.jpg
 imgCredit: Location South/Alamy Stock Photo

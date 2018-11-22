@@ -6,7 +6,7 @@ inner: false
 start: 2011 
 end: ''
 title: Milestone 20
-URL: /#
+URL: '#'
 headline: Antiretroviral treatment as prevention
 imgURL: img/hiv-m20.jpg
 imgCredit: Zoonar GmbH/ALamy Stock Photo

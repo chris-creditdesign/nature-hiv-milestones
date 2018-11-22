@@ -6,7 +6,7 @@ inner: false
 start: 1985 
 end: ''
 title: ''
-URL: /#
+URL: '#'
 headline: Clinical test to detect AIDS virus
 imgURL: img/hiv-s1.jpg
 imgCredit: Credit

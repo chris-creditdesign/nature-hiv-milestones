@@ -6,7 +6,7 @@ inner: false
 start: 1983 
 end: ''
 title: Milestone 2
-URL: /#
+URL: '#'
 headline: Discovery of HIV-1
 imgURL: img/hiv-m02.jpg
 imgCredit: Stocktrek Images, Inc./Alamy Stock Photo
