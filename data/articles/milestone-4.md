@@ -10,7 +10,7 @@ URL: '#'
 headline: AIDS is a pandemic disease
 imgURL: img/hiv-m04.jpg
 imgCredit: PhotoDisc/Getty Images
-imgAlt: People wearing ribbons for World AIDS Day
+imgAlt: Hand prints saying Stop the chain of AIDS
 authorList:
     - Ursula Hofer
 ---
