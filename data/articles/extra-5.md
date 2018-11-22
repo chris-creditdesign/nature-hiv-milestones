@@ -1,7 +1,7 @@
 ---
 id: extra-5
 articleType: image
-secondary: false
+secondary: true
 inner: false
 start: 2008 
 end: ''
