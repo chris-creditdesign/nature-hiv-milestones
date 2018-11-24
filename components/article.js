@@ -45,7 +45,7 @@ const Article = ({
 						? <h2 tabIndex='-1'>
 							<a href={URL} dangerouslySetInnerHTML={{__html: headline}}></a>					
 						</h2>
-						: <h2 tabIndex='-1' dangerouslySetInnerHTML={{__html: headline}}></h2>
+						: <h2 dangerouslySetInnerHTML={{__html: headline}}></h2>
 					}
 
 				</header>
