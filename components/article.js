@@ -2,7 +2,7 @@ const React = require('react')
 const VideoArticle = require('./video-article.js')
 
 function makeClassName(start, secondary, inner ) {
-	const jsStory = start ? 'js-story' : ''
+	const jsStory = !secondary && start ? 'js-story' : ''
 	const articleSecondary = secondary ? 'article--secondary' : ''
 	const articleInner = inner ? 'article--inner' : ''
 	return `article article--with-image ${jsStory} ${articleSecondary} ${articleInner}`
