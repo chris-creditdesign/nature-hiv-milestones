@@ -9,11 +9,6 @@ function buildSvg() {
 		.attr('aria-label', 'Milestones timeline')
 		.attr('focusable', 'false')
 
-	this.svg
-		.append('title')
-		.attr('id', 'timeline-title')
-		.text('Milestones in HIV')
-
 	this.axisContainer = this.svg.append('g')
 		.attr('class', 'axisContainer')
 		.attr('transform', `translate(${this.margins.left},${this.margins.top})`)
