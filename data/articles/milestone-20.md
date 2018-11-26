@@ -14,4 +14,4 @@ imgAlt: A blue PrEP pill
 authorList:
     - Gavin Mason
 ---
-Antiretroviral treatment (ART) is a crucial tool for both treatment of HIV and prevention of infection. By reducing virus levels in infected individuals, or when used as pre-exposure prophylaxis in HIV-negative individuals, ART can interrupt transmission of HIV. <a href="https://www.nature.com/articles/d42859-018-00021-9">Read more</a>
+Antiretroviral therapy (ART) is a crucial tool for both treatment of HIV and prevention of infection. By reducing virus levels in infected individuals, or when used as pre-exposure prophylaxis in HIV-negative individuals, ART can interrupt transmission of HIV. <a href="https://www.nature.com/articles/d42859-018-00021-9">Read more</a>
