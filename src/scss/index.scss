@@ -59,6 +59,15 @@ p {
 	line-height: 1.6rem;
 }
 
+sup, sub {
+  vertical-align: baseline;
+  position: relative;
+  top: -0.4em;
+}
+sub { 
+  top: 0.4em; 
+}
+
 .visually-hidden {
 	width: 1px;
 	height: 1px;
