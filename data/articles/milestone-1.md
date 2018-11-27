@@ -7,7 +7,7 @@ start: 1981
 end: ''
 title: Milestone 1
 URL: https://www.nature.com/articles/d42859-018-00002-y
-headline: First report of AIDS cases
+headline: First reports of AIDS cases
 imgURL: img/hiv-m01.jpg
 imgCredit: Evgeny Gromov/Alamy Stock Photo
 imgAlt: HIV virus tag cloud 

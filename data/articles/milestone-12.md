@@ -9,8 +9,8 @@ title: Milestone 12
 URL: https://www.nature.com/articles/d42859-018-00013-9
 headline: CD8<sup>+</sup> T cells control virus levels
 imgURL: img/hiv-m12.jpg
-imgCredit: © David Scharf/Science Faction/Corbis
-imgAlt: Close up of a T cell
+imgCredit: Phanie/Alamy Stock Photo
+imgAlt: Color enhanced transmission electron micrograph TEM of an HIV virus budding out of an infected T-lymphocyte cell
 authorList:
     - Alison Farrell
 ---
