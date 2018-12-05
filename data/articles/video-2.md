@@ -9,4 +9,4 @@ end: ''
 title: Video 2
 headline: Discovering HIV
 ---
-Watch Nobel Laureate and a co-discoverer of HIV Francoise Barre Sinoussi recall early studies leading to to the identification of the causative agent of AIDS.
+Watch Nobel Laureate and a co-discoverer of HIV Françoise Barré-Sinoussi recall early studies leading to to the identification of the causative agent of AIDS.

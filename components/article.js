@@ -2,7 +2,7 @@ const React = require('react')
 const VideoArticle = require('./video-article.js')
 
 function makeClassName(start, secondary, inner ) {
-	const jsStory = !secondary && start ? 'js-story' : ''
+	const jsStory = start ? 'js-story' : ''
 	const articleSecondary = secondary ? 'article--secondary' : ''
 	const articleInner = inner ? 'article--inner' : ''
 	return `article article--with-image ${jsStory} ${articleSecondary} ${articleInner}`
@@ -44,8 +44,8 @@ const Article = ({
 					{URL.length
 						? <h2 tabIndex='-1'>
 							<a href={URL} dangerouslySetInnerHTML={{__html: headline}}></a>					
-						</h2>
-						: <h2 dangerouslySetInnerHTML={{__html: headline}}></h2>
+						</h2 >
+						: <h2 tabIndex='-1' dangerouslySetInnerHTML={{__html: headline}}></h2>
 					}
 
 				</header>
