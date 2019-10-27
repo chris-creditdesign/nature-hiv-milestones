@@ -1,5 +1,7 @@
 # Enhanced presentation for Nature HIV Milestone
 
+Published online at: [https://www.nature.com/collections/mghkkdjlgx/timeline/]()
+
 ## Install [webpack](https://webpack.js.org/) and dependencies:
 
 	npm install
