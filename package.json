@@ -71,7 +71,7 @@
     "babel-preset-react": "^6.24.1",
     "babel-register": "^6.26.0",
     "htmltidy2": "^0.3.0",
-    "marked": "^0.5.1",
+    "marked": "^0.7.0",
     "react": "^16.6.0",
     "react-dom": "^16.6.0"
   }
